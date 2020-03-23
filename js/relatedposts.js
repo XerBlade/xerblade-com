@@ -1,0 +1,151 @@
+/* Set up related posts */
+'use strict';
+
+var defaultnoimage = "https://1.bp.blogspot.com/-nFUoiZWLdww/W20wJys8EzI/AAAAAAABtUw/uguC0eLLQuoiofVEKUqG5GYrPGigfpqoACLcBGAs/w576-h324-p-k-no-nu/no-thumb-square.jpg",
+    maxresults = 3,
+    relatedpoststitle = " Related Posts",
+    norelatedpoststitle = " No related posts",
+    relatedTitles = new Array,
+    relatedTitlesFull = new Array,
+    relatedTitlesNum = 0,
+    relatedUrls = new Array,
+    thumburl = new Array,
+	canonicalHomeURL = "https://www.xerblade.com/";
+	
+
+// Asynchronous get script without JQuery
+function loadScript(source) {
+	return new Promise(function(resolve, reject) {
+		let script = document.createElement('script');
+
+		script.async = true;
+
+		script.onload = function() { resolve(script); };
+		script.onerror = function() { reject(new Error('Failed to load ' + source)); };
+
+		script.src = source;
+		document.head.appendChild(script);
+	});
+}
+
+// Alternative version when that doesn't work
+function loadScriptIE(source, callback) {
+	let script = document.createElement('script');
+	script.src = source;
+
+	script.onload = function() { callback(null, script); };
+	script.onerror = function() { callback(new Error('Script load error for ${source}')); };
+
+	document.head.appendChild(script);
+}
+
+
+/*
+$.getMultiScripts = function(arr, path) {
+    var _arr = $.map(arr, function(scr) {
+        return $.getScript( (path||"") + scr );
+    });
+
+    _arr.push($.Deferred(function( deferred ){
+        $( deferred.resolve );
+    }));
+
+    return $.when.apply($, _arr);
+}*/
+	
+function related_results_labels_thumbs(e) {
+	var s, a, b, c, d, tt;
+    for (var t = 0; t < e.feed.entry.length; t++) {
+        var l = e.feed.entry[t];
+        relatedTitles[relatedTitlesNum] = l.title.$t;
+        relatedTitlesFull[relatedTitlesNum] = l.title.$t;
+        try {
+            l.media$thumbnail.url && (tt = l.media$thumbnail.url, thumburl[relatedTitlesNum] = tt.replace("/s72-c/", "/w576-h324-p-k-no-nu/"))
+        } catch (r) {
+            s = l.content.$t, a = s.indexOf("<img"), b = s.indexOf('src="', a), c = s.indexOf('"', b + 5), d = s.substr(b + 5, c - b - 5), -1 != a && -1 != b && -1 != c && "" != d ? thumburl[relatedTitlesNum] = d : "undefined" != typeof defaultnoimage ? thumburl[relatedTitlesNum] = defaultnoimage : thumburl[relatedTitlesNum] = "https://3.bp.blogspot.com/-PpjfsStySz0/UF91FE7rxfI/AAAAAAAACl8/092MmUHSFQ0/w576-h324-p-k-no-nu/no_image.jpg"
+        }
+        relatedTitles[relatedTitlesNum].length > 35 && (relatedTitles[relatedTitlesNum] = relatedTitles[relatedTitlesNum].substring(0, 35) + "...");
+        for (var i = 0; i < l.link.length; i++) "alternate" == l.link[i].rel && (relatedUrls[relatedTitlesNum] = l.link[i].href, relatedTitlesNum++)
+    }
+}
+
+var postsHTML = "";
+function concatstrings (a,b) {
+	postsHTML = postsHTML.concat(b);
+}
+
+function removeRelatedDuplicates() {
+    for (var e = new Array(0), t = new Array(0), f = new Array(0), l = new Array(0), r = 0; r < relatedUrls.length; r++) contains_thumbs(e, relatedUrls[r]) || (e.length += 1, e[e.length - 1] = relatedUrls[r], t.length += 1, f.length += 1, l.length += 1, t[t.length - 1] = relatedTitles[r], f[f.length - 1] = relatedTitlesFull[r], l[l.length - 1] = thumburl[r]);
+    relatedTitles = t, relatedTitlesFull = f, relatedUrls = e, thumburl = l;
+}
+
+function contains_thumbs(e, t) {
+    for (var l = 0; l < e.length; l++)
+        if (e[l] == t) return true;
+    return false;
+}
+
+function printRelatedLabels(e) {
+    var t;
+    t = "undefined" != typeof splittercolor ? splittercolor : "#DDDDDD";
+    for (var l = 0; l < relatedUrls.length; l++) relatedUrls[l] != e && relatedTitles[l] || (relatedUrls.splice(l, 1), relatedTitles.splice(l, 1), relatedTitlesFull.splice(l, 1), thumburl.splice(l, 1), l--);
+    var r = Math.floor((relatedTitles.length - 1) * Math.random()),
+        l = 0;
+	
+    for (0 == relatedTitles.length && concatstrings(postsHTML, "<h4 class='card-panel'>" + norelatedpoststitle + "</h4>"), relatedTitles.length > 0 && concatstrings(postsHTML, "<h4>" + relatedpoststitle + "</h4>"), concatstrings(postsHTML, '<div class="row">'); l < relatedTitles.length && 20 > l && maxresults > l;) concatstrings(postsHTML, '<div class="col s12 m4 l4"><div class="card" title="' + relatedTitlesFull[r] + '"><a'), 0 != l ? concatstrings(postsHTML, ' ') : concatstrings(postsHTML, ' '), concatstrings(postsHTML, 'href="' + relatedUrls[r] + '"><div class="card-image"><picture><source data-srcset="' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w297-h167-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 297w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w258-h145-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 258w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w210-h118-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 210w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w149-h84-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 149w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w352-h198-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 352w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w576-h324-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 576w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w640-h360-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 640w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w800-h450-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 800w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w1024-h576-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 1024w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w1280-h720-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 1280w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w1440-h810-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 1440w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w1920-h1080-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 1920w" sizes="(min-width: 1389px) 297px, (min-width: 993px) 22vw, (min-width: 601px) 26vw, (min-width: 451px) 96vw, 94vw" type="image/webp"/><source data-srcset="' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w297-h167-p-k-no-nu/") + ' 297w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w258-h145-p-k-no-nu/") + ' 258w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w210-h118-p-k-no-nu/") + ' 210w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w149-h84-p-k-no-nu/") + ' 149w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w352-h198-p-k-no-nu/") + ' 352w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w576-h324-p-k-no-nu/") + ' 576w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w640-h360-p-k-no-nu/") + ' 640w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w800-h450-p-k-no-nu/") + ' 800w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w1024-h576-p-k-no-nu/") + ' 1024w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w1280-h720-p-k-no-nu/") + ' 1280w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w1440-h810-p-k-no-nu/") + ' 1440w, ' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w1920-h1080-p-k-no-nu/") + ' 1920w" sizes="(min-width: 1389px) 297px, (min-width: 993px) 22vw, (min-width: 601px) 26vw, (min-width: 451px) 96vw, 94vw" type="image/jpeg"/><img class="lazyload" data-src="' + thumburl[r] + '" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" loading="lazy"/></picture></div><div class="card-content imgpost">' + relatedTitles[r] + "</div></a></div></div>"), l++, r < relatedTitles.length - 1 ? r++ : r = 0;
+    concatstrings(postsHTML, "</div>"), relatedUrls.splice(0, relatedUrls.length), thumburl.splice(0, thumburl.length), relatedTitles.splice(0, relatedTitles.length);
+	var elem = document.getElementById("related-posts");
+	
+	if (elem) {
+		elem.innerHTML = postsHTML;
+	}
+}
+
+/*function printRelatedLabels(e) {
+    var t;
+    t = "undefined" != typeof splittercolor ? splittercolor : "#DDDDDD";
+    for (var l = 0; l < relatedUrls.length; l++) relatedUrls[l] != e && relatedTitles[l] || (relatedUrls.splice(l, 1), relatedTitles.splice(l, 1), thumburl.splice(l, 1), l--);
+    var r = Math.floor((relatedTitles.length - 1) * Math.random()),
+        l = 0;
+	
+    for (0 == relatedTitles.length && concatstrings(postsHTML, "<h4 class='card-panel'>" + norelatedpoststitle + "</h4>"), relatedTitles.length > 0 && concatstrings(postsHTML, "<h4>" + relatedpoststitle + "</h4>"), concatstrings(postsHTML, '<div class="row">'); l < relatedTitles.length && 20 > l && maxresults > l;) concatstrings(postsHTML, '<div class="col s12 m4 l4"><div class="card"><a'), 0 != l ? concatstrings(postsHTML, ' ') : concatstrings(postsHTML, ' '), concatstrings(postsHTML, 'href="' + relatedUrls[r] + '"><div class="card-image"><picture><source data-srcset="' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w297-h167-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + '" media="(min-width: 601px)" type="image/webp"/><source data-srcset="' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w297-h167-p-k-no-nu/") + '" media="(min-width: 601px)" type="image/jpeg"/><source data-srcset="' + thumburl[r].replace("/w576-h324-p-k-no-nu/", "/w576-h324-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + '" type="image/webp"/><img class="lazyload" data-src="' + thumburl[r] + '" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" loading="lazy"/></picture></div><div class="card-content imgpost">' + relatedTitles[r] + "</div></a></div></div>"), l++, r < relatedTitles.length - 1 ? r++ : r = 0;
+    concatstrings(postsHTML, "</div>"), relatedUrls.splice(0, relatedUrls.length), thumburl.splice(0, thumburl.length), relatedTitles.splice(0, relatedTitles.length);
+	var elem = document.getElementById("related-posts");
+	
+	if (elem) {
+		elem.innerHTML = postsHTML;
+	}
+}*/
+
+
+
+var arrayLength = labels.length;
+var jsonscripts = [];
+for (var i = 0; i < arrayLength; i++) {
+    jsonscripts.push(canonicalHomeURL + "feeds/posts/default/-/" + labels[i] + "?alt=json-in-script&callback=related_results_labels_thumbs&max-results=6");
+	
+}
+
+var url = [location.protocol, '//', location.host, location.pathname].join('');
+
+if (typeof Promise !== "undefined" && Promise.toString().indexOf("[native code]") !== -1) {
+	let jsonrequests = jsonscripts.map(loadScript);
+
+	Promise.all(jsonrequests).then(function(responses) {
+
+		removeRelatedDuplicates();
+		printRelatedLabels(url);
+
+	});
+} else {
+	// Fallback for... IE basically
+	if (jsonscripts.length > 0) {
+		loadScriptIE(jsonscripts[0], function(script) {
+			removeRelatedDuplicates();
+			printRelatedLabels(url);
+		});
+	} else {
+		removeRelatedDuplicates();
+		printRelatedLabels(url);
+	}
+}
