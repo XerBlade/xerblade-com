@@ -180,9 +180,9 @@ if (disqus_target && related_target) {
 	// Which "related posts" should we be using?
 	var relatedsrc;
 	if(window.location.href.indexOf("\/p\/") > -1) {
-		relatedsrc = "https://gistcdn.githack.com/XerBlade/769370459ff86592794d9b1dcf701345/raw/aae4c7d91a4fef7369b5a97b7d13f3e5b6aa523c/recentposts.min.js";
+		relatedsrc = "https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/1160817b179aa4539a8ca508c33f1cf10eca938f/js/recentposts.js";
 	} else {
-		relatedsrc = "https://gistcdn.githack.com/XerBlade/769370459ff86592794d9b1dcf701345/raw/aae4c7d91a4fef7369b5a97b7d13f3e5b6aa523c/relatedposts.min.js";
+		relatedsrc = "https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/1160817b179aa4539a8ca508c33f1cf10eca938f/js/relatedposts.js";
 	}
 	
 	function loadDisqus(target) {
