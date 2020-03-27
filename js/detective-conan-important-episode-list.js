@@ -443,10 +443,12 @@ document.addEventListener('DOMContentLoaded', function() {
 				document.getElementById(hash).scrollIntoView(true);
 				break;
 			default:
-				if (hash.indexOf("comment-") == 0) {
-					document.getElementById("disqus_thread").scrollIntoView(true);
-				}
-				window.location.hash = hash;
+				window.addEventListener('load', function() {
+					if (hash.indexOf("comment-") == 0) {
+						document.getElementById("disqus_thread").scrollIntoView(true);
+					}
+					window.location.hash = hash;
+				});
 				break;
 		}
 	}
