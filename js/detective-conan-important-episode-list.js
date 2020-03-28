@@ -31,13 +31,20 @@ function removeHash () {
 	}
 }
 
-if (window.location.hash && window.location.hash.indexOf("comment-") < 0) {
+if (window.location.hash) {
 	var hash = window.location.hash;
 	if (hash) {
 		hash = hash.replace(/#/, "");
 		// console.log("hash: ", hash);
-		removeHash();
-		/*if (document.readyState == 'loading') {
+		
+		if(hash.indexOf("comment-") == 0) {
+			hash = "";
+		} else {
+			removeHash();
+		}
+		
+		/*removeHash();
+		if (document.readyState == 'loading') {
 			window.addEventListener("DOMContentLoaded", function(e) {
 				try {
 					document.getElementById(hash).scrollIntoView(true);
@@ -338,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	tabs.index = 1;
 	
 	/* Go to position specified by any hash entered page with */
-	if (typeof hash !== 'undefined' && !!hash) {
+	if (hash) {
 		switch(hash){
 			case 'intro':
 			case 'tabintro':
