@@ -445,8 +445,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			default:
 				window.addEventListener('load', function() {
 					if (hash.indexOf("comment-") == 0) {
-						document.getElementById("disqus_thread").scrollIntoView(true);
-						document.documentElement.scrollIntoView(true);
+						document.getElementById("footer").scrollIntoView(true);
 					}
 					window.location.hash = hash;
 				});
