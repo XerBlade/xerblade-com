@@ -36,15 +36,8 @@ if (window.location.hash) {
 	if (hash) {
 		hash = hash.replace(/#/, "");
 		// console.log("hash: ", hash);
-		
-		if(hash.indexOf("comment-") == 0) {
-			hash = "";
-		} else {
-			removeHash();
-		}
-		
-		/*removeHash();
-		if (document.readyState == 'loading') {
+		removeHash();
+		/*if (document.readyState == 'loading') {
 			window.addEventListener("DOMContentLoaded", function(e) {
 				try {
 					document.getElementById(hash).scrollIntoView(true);
