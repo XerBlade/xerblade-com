@@ -178,11 +178,13 @@ var lazyconfig = {
 // If those don't exist, we know we're in the wrong place
 if (disqus_target && related_target) {
 	// Which "related posts" should we be using?
-	var relatedsrc;
+	var relatedsrc, relatedtitle;
 	if(window.location.href.indexOf("\/p\/") > -1) {
 		relatedsrc = "https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/1160817b179aa4539a8ca508c33f1cf10eca938f/js/recentposts.js";
+		relatedtitle = 'recent posts';
 	} else {
 		relatedsrc = "https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/1160817b179aa4539a8ca508c33f1cf10eca938f/js/relatedposts.js";
+		relatedtitle = 'related posts';
 	}
 	
 	function loadDisqus(target) {
@@ -190,13 +192,16 @@ if (disqus_target && related_target) {
 		var is_disqus_empty = document.getElementById('disqus_empty'),
 			disqus_embed    = document.createElement('script');
 
-		// Load script asynchronously only when the target hasn't been filled
-		if (target && is_disqus_empty) {
+		// Load script asynchronously
+		if (target) {
 			disqus_embed.type = 'text/javascript';
 			disqus_embed.async = true;
+			disqus_embed.onload = console.log("Disqus loaded.");
 			disqus_embed.src = 'https://xerblade.disqus.com/embed.js';
 			document.head.appendChild(disqus_embed);
-			is_disqus_empty.parentNode.removeChild(is_disqus_empty);
+			if (is_disqus_empty && is_disqus_empty.parentNode) {
+				is_disqus_empty.parentNode.removeChild(is_disqus_empty);
+			}
 		}
 	}
 
@@ -207,9 +212,23 @@ if (disqus_target && related_target) {
 		related_embed.type = 'text/javascript';
 		related_embed.async = true;
 		related_embed.setAttribute('crossorigin', 'anonymous');
-		related_embed.onerror = function() { throw(new Error('Failed to load ' + this.src)); }
+		related_embed.onload = console.log("Related posts loaded.");
+		related_embed.onerror = function() {
+			failedToLoadRelatedPosts();
+			this.parentNode.removeChild(this);
+			throw(new Error('Failed to load ' + this.src));
+		}
 		related_embed.src = relatedsrc;
 		document.head.appendChild(related_embed);
+	}
+	
+	function failedToLoadRelatedPosts() {
+		related_target.innerhtml = `
+			<div class='card'>
+				<div class='card-content'>Failed to load ` + relatedtitle + `.</div>
+				<div class='card-action'><button class='btn ripple ripple-light' onclick='loadRelatedPosts(document.getElementById('related-posts'))'>Retry</button></div>
+			</div>
+		`;
 	}
 
 	var checkhash = window.location.hash;
@@ -224,11 +243,9 @@ if (disqus_target && related_target) {
 					if (entry.intersectionRatio > 0 && entry.target == disqus_target) {
 						lazyobserver.unobserve(entry.target);
 						loadDisqus(entry.target);
-						console.log('Disqus loaded.');
 					} else if (entry.intersectionRatio > 0 && entry.target == related_target) {
 						lazyobserver.unobserve(entry.target);
 						loadRelatedPosts(entry.target);
-						console.log('Related posts loaded.');
 					}
 				});
 			}
