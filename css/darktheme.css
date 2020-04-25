@@ -522,24 +522,23 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus,
 
 /* Scrollbars */
 @media (hover) {
-	/* width */
-	::-webkit-scrollbar {
-		width: 15px;
-	}
-
 	/* Track */
-	::-webkit-scrollbar-track {
-		background: rgba(37,37,37,1);
+	::-webkit-scrollbar-track:hover,
+	::-webkit-scrollbar-track:active {
+		background-color: rgba(255, 255, 255, 0.05);
 	}
 
 	/* Handle */
 	::-webkit-scrollbar-thumb {
-		background: rgba(54,54,54,1);
+		background-color: rgba(255, 255, 255, 0.2);
 	}
 
-	/* Handle on hover */
 	::-webkit-scrollbar-thumb:hover {
-		background: rgba(56,56,56,1); 
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+
+	::-webkit-scrollbar-thumb:active {
+		background-color: rgba(255, 255, 255, 0.5);
 	}
 }
 
