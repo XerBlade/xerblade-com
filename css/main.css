@@ -827,7 +827,7 @@ div.clear {
 	.google-auto-placed, .adsbygoogle, script, ins, .navigation-rail {
 		display: none !important;
 	}
-	#tab-contents > div {
+	#tab-contents > * {
 		display: block !important;
 	}
 	.card-image {
