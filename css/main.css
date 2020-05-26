@@ -50,11 +50,12 @@ h1, h2, h3, h4, h5, h6, .brand-logo, .card-title {
 	font-family: 'Roboto Slab', serif;
 }
 
-.dc-list-pos {
+/*.dc-list-pos {
 	font-family: 'Roboto Slab', serif;
-}
+}*/
 
 .dc-list-pos .dc-list-no {
+	font-family: 'Roboto Slab', serif;
 	font-weight: 600;
 }
 
