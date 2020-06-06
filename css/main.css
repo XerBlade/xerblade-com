@@ -1872,6 +1872,11 @@ abbr[title] {
 	}
 }
 
+/* Details pulldown indicators on Detective Conan Episode List to keep list items aligned */
+#tab-contents summary {
+    text-indent: -17px;
+}
+
 
 
 /* Stuff moved from template-skin for brevity */
