@@ -148,10 +148,10 @@ if (!!description) {
  
 		//jQuery('html, body').animate({scrollTop: 0}, duration);
 		try {
-			document.documentElement.scrollIntoView(scrollOptions);
+			pixeltracking.scrollIntoView(scrollOptions);
 		} catch (e) {
 			//fallback when scrollintoview options is not supported
-			document.documentElement.scrollIntoView(true);
+			pixeltracking.scrollIntoView(true);
 		}
  
 		return false;
