@@ -1913,12 +1913,12 @@ div.collapsible-body ul li {
 
 /* Begin Noscript */
 /* Smooth Scrolling */
-html.no-js {
+html.no-js, html.no-js #main-scrollarea {
 	scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
-	html.no-js {
+	html.no-js, html.no-js #main-scrollarea {
 		scroll-behavior: auto;
 	}
 }
