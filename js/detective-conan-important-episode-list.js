@@ -323,7 +323,8 @@ function ChangePageAndKeepPosition(callingElement, targetTabID) {
 	if (!(~hash.indexOf("tab"))) {*/
 		var afterElementPosition = callingElement.getBoundingClientRect().top;
 		
-		window.scrollBy(0, afterElementPosition - startingElementPosition);
+		var mainScrollarea = document.getElementById('main-scrollarea');
+		mainScrollarea.scrollBy(0, afterElementPosition - startingElementPosition);
 	/*}*/
 }
 
