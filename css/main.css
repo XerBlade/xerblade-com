@@ -177,8 +177,8 @@ body.main-body {
 .anchor{
 	float: left;
 	display: block;
-	height: 64px; /*same height as header*/
-	margin-top: -64px; /*same height as header*/
+	/*height: 64px;*/ /*same height as header*/
+	/*margin-top: -64px;*/ /*same height as header*/
 	visibility: hidden;
 }
 
