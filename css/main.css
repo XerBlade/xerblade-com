@@ -770,7 +770,7 @@ nav .brand-logo.logo-main {
 
 /* Make room for navigation rail */
 
-@media only screen and (min-width: 601px) and (max-width: 992px) {
+@media only screen and (min-width: 601px) and (max-width: 992px) and (min-height: 520px) {
 	.container {
 		margin-left: 86px;
 	}
@@ -1097,12 +1097,6 @@ body {
     top: 64px;
     z-index: 100;
     padding-top: 21px;
-}
-
-@media only screen and (max-height: 540px) {
-	.navigation-rail {
-	   overflow-y: scroll;
-	}
 }
 
 .rail-item {
@@ -1492,13 +1486,23 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 	display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px), (min-width: 601px) and (max-width: 992px) and (max-height: 519px) {
 	
 	.navbar-fixed {
 		bottom: 0;
+		height: 56px;
+	}
+	
+	.navbar-fixed nav, .navbar-fixed ul:not(.sidenav) li, .nav-svg, .nav-svg svg {
+		height: 56px;
+		line-height: 56px;
 	}
 	
 	.brand-logo.logo-main {
+		display: none;
+	}
+	
+	.navigation-rail {
 		display: none;
 	}
 	
@@ -1520,7 +1524,7 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 		left: 0;
 		margin: 0;
 		cursor: pointer;
-		display: block;
+		display: block !important;
 	}
 	
 	.sidenav.sidenav-fixed {
@@ -1533,6 +1537,8 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 		-webkit-transform: translateX(0);
 		transform: translateX(0);
 		overflow: hidden;
+		-webkit-box-shadow: none;
+		box-shadow: none;
 	}
 	
 	#slide-out {

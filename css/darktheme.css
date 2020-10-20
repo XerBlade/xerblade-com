@@ -233,9 +233,14 @@ span.badge.new, span.badge.new.red {
 	color: #80DEEA;
 	background-color: rgba(255,255,255,0.12) !important;
 	border: 1px rgba(255,255,255,0.87) solid;
-	border-left: none;
 	/*height: 46px;*/
 	line-height: 46px;
+}
+
+@media (min-width: 601px) {
+	.sidenav li.active > a {
+		border-left: none;
+	}
 }
 
 .sidenav li.active>a>i, .sidenav li.active>a>[class^="mdi-"], .sidenav li>a li.active>a>[class*="mdi-"], .sidenav li.active>a>i.material-icons {
