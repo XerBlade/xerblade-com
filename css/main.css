@@ -1592,6 +1592,42 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 	}
 }
 
+@media (max-height: 374) {
+	.sidenav-rss {
+		display: none;
+	}
+	
+	.sidenav-follow {
+		margin-bottom: 8px;
+	}
+	
+	.nav-wrapper #menu-toggle.active ~ #slide-out, .nav-wrapper #menu-toggle:checked ~ #slide-out {
+		max-height: 275px;
+	}
+}
+
+@media (max-height: 328) {
+	.sidenav-rss {
+		display: none;
+	}
+	
+	.sidenav-follow {
+		display: none;
+	}
+	
+	sidenav li div.divider {
+		display: none;
+	}
+	
+	.sidenav-about {
+		margin-bottom: 8px;
+	}
+	
+	.nav-wrapper #menu-toggle.active ~ #slide-out, .nav-wrapper #menu-toggle:checked ~ #slide-out {
+		max-height: 210px;
+	}
+}
+
 /* CSS-only material wave effect */
 .ripple {
 	overflow: hidden;
