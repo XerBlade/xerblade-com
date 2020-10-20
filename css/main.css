@@ -1592,7 +1592,7 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 	}
 }
 
-@media (max-height: 374) {
+@media (max-height: 374px) {
 	.sidenav-rss {
 		display: none;
 	}
@@ -1606,7 +1606,7 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 	}
 }
 
-@media (max-height: 328) {
+@media (max-height: 328px) {
 	.sidenav-rss {
 		display: none;
 	}
