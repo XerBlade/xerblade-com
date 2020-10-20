@@ -745,7 +745,7 @@ nav .brand-logo.logo-main {
 }
 #main-scrollarea {
 	height: calc(100vh - 56px);
-	margin-top: 56px;
+	margin-bottom: 56px;
 	overflow-y: scroll;
 	position: absolute;
 	width: 100%;
@@ -754,6 +754,7 @@ nav .brand-logo.logo-main {
 	#main-scrollarea {
 		height: calc(100vh - 64px);
 		margin-top: 64px;
+		margin-bottom: 0;
 	}
 }
 
@@ -1486,12 +1487,24 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
     background-color: #FF8A80 !important;
 }
 
-/* CSS-only sidenav */
+/* Bottom bar with CSS-only sidenav */
 .nav-wrapper #menu-toggle {
 	display: none;
 }
 
 @media (max-width: 600px) {
+	
+	.navbar-fixed {
+		bottom: 0;
+	}
+	
+	.brand-logo.logo-main {
+		display: none;
+	}
+	
+	.fixed-action-btn {
+		bottom: 79px;
+	}
 
 	.nav-wrapper:after {
 		content: ""; display: table; clear: both;
@@ -1510,29 +1523,47 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 		display: block;
 	}
 	
-	.no-js .menu-button svg#sidenav-close { 
-		display: none; 
-	}
-	
-	.no-js .nav-wrapper #menu-toggle.active ~ .menu-button #sidenav-open, .nav-wrapper #menu-toggle:checked ~ .menu-button #sidenav-open {
-		display: none;
-	}
-
-	.no-js .nav-wrapper #menu-toggle.active ~ .menu-button #sidenav-close, .nav-wrapper #menu-toggle:checked ~ .menu-button #sidenav-close {
-		display: inline !important;
+	.sidenav.sidenav-fixed {
+		top: auto;
+		bottom: 56px;
+		padding-top: 0;
+		padding-bottom: 0;
+		width: 100%;
+		height: fit-content;
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+		overflow: hidden;
 	}
 	
 	#slide-out {
-		transition: transform 0.2s cubic-bezier(0,0,0.3,1);
+		max-height: 0;
+		transition: max-height 0.2s cubic-bezier(0,0,0.3,1);
 	}
 	
 	.nav-wrapper #menu-toggle.active ~ #slide-out, .nav-wrapper #menu-toggle:checked ~ #slide-out {
-		transform: translateX(0);
-		transition: transform 0.25s cubic-bezier(0,0,0.3,1);
+		max-height: 330px;
+		transition: max-height 0.25s cubic-bezier(0,0,.3,1);
 	}
+	
+	.sidenav li {
+		padding-left: 24px;
+	}
+	
+	.sidenav li:first-child {
+		margin-top: 8px;
+	}
+	
+	.sidenav li:last-child {
+		margin-bottom: 8px;
+	}
+	
+	.sidenav li > a {
+		border-radius: 6px;
+	}
+	
 	.nav-wrapper .menu-button:after {
+		bottom: 56px;
 		opacity: 0;
-		top: 56px;
 		content: "";
 		width: 100vw;
 		display: block;
