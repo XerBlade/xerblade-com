@@ -743,18 +743,20 @@ nav .brand-logo.logo-main {
 .navbar-fixed {
 	position: fixed;
 }
+
 #main-scrollarea {
-	height: calc(100vh - 56px);
-	margin-bottom: 56px;
-	overflow-y: scroll;
-	position: absolute;
-	width: 100%;
+	height: calc(100vh - 64px);
+	margin-top: 64px;
 }
-@media only screen and (min-width: 601px) {
+
+@media (max-width: 600px), (max-width: 992px) and (min-width: 601px) and (max-height: 519px) {
 	#main-scrollarea {
-		height: calc(100vh - 64px);
-		margin-top: 64px;
-		margin-bottom: 0;
+		height: calc(100vh - 56px);
+		margin-top: 0;
+		margin-bottom: 56px;
+		overflow-y: scroll;
+		position: absolute;
+		width: 100%;
 	}
 }
 
