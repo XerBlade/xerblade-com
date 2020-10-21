@@ -742,6 +742,11 @@ nav .brand-logo.logo-main {
 /* True fixed navbar */
 .navbar-fixed {
 	position: fixed;
+	width: 100%;
+}
+
+.navbar-fixed nav {
+	position: static;
 }
 
 #main-scrollarea {
