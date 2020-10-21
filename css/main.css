@@ -1523,6 +1523,10 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 			z-index: 998;
 		}
 		
+		#main-scrollarea {
+			margin-bottom: 84px;
+		}
+		
 	}
 
 	.nav-wrapper:after {
