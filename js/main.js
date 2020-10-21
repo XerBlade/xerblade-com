@@ -314,10 +314,10 @@ if (!!disquslink) {
 			if (canonicalElement !== null) {
 				url = canonicalElement.href;
 			}
-			const text = 'Check out this page';
+			// const text = 'Check out this page';
 			navigator.share({
 				title: title,
-				text: text,
+				// text: text,
 				url: url,
 			})
 			.then(function() { console.log('Successful share') })
@@ -330,6 +330,7 @@ if (!!disquslink) {
 		}
 	}
 
+// End mobile native share button
 
 
 // Start custom form validation display
