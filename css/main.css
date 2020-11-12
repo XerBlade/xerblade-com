@@ -89,6 +89,8 @@ html {
 
 .collection .collection-item.avatar .title {
 	font-size: 1.1em;
+	line-height: inherit;
+	margin: 0;
 }
 
 /* Better contrast for links */
