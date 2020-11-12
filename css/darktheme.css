@@ -205,13 +205,12 @@ span.badge.new, span.badge.new.red {
 }
 
 .fixed-action-btn .btn-floating.grey {
-	background-color: rgba(44,44,44,1) !important;
-	/*opacity: 0.9 !important;*/
+	background-color: rgb(51,51,51) !important;
 }
 
 .fixed-action-btn .btn-floating.grey:hover,
 .fixed-action-btn .btn-floating.grey:focus {
-	background-color: rgba(54,54,54,1) !important;
+	background-color: rgb(56,56,56) !important;
 }
 
 .divider {
