@@ -58,17 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		elem.textContent = formatShortDateTime(elem.getAttribute("content"));
 	});
 });
-	
-// End format timestamps
 
-// Begin initialize sidenav
-/*
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems);
 
-document.getElementById('sidenav-trigger').classList.remove('disabled');
-*/
-//End initialize sidenav
 
 // Begin move pages with individual meta descriptions into head element for search crawlers that don't check the body for those
 
@@ -121,14 +112,18 @@ if (!!description) {
 	
 	
 	if ('IntersectionObserver' in window) {
+		var backToTopBtnContainer = document.getElementById("backToTopBtnContainer");
+		var backToTopBtn = document.getElementById("backToTopBtn");
 		function onIntersection(entries) {
 			entries.forEach(function(entry) {
 				if (entry.intersectionRatio > 0 && entry.target == pixeltracking) {
-					document.getElementById("backToTopBtnContainer").classList.remove("visible");
+					backToTopBtnContainer.classList.remove("visible");
+					backToTopBtn.tabIndex = -1;
 					// jQuery('#backToTopBtn').fadeOut(duration);
 					// console.log('Fade out');
 				} else if (entry.intersectionRatio <= 0 && entry.target == pixeltracking) {
-					document.getElementById("backToTopBtnContainer").classList.add("visible");
+					backToTopBtnContainer.classList.add("visible");
+					backToTopBtn.tabIndex = 0;
 					// jQuery('#backToTopBtn').fadeIn(duration);
 					// console.log('Fade in');
 				}

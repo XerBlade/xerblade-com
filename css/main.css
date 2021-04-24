@@ -246,6 +246,9 @@ span.show {
     outline: none;
     height: 30px;
 }
+.pagination li {
+	user-select: none;
+}
 
 /* Make pagination buttons that should not do anything unlickable */
 .pagination li.disabled a, .pagination li.active a,
