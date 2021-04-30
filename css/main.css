@@ -1753,6 +1753,10 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 	display: block;
 }
 
+.tabs-loaded.tab1000 > #tab1000 {
+	display: block;
+}
+
 .tabs-loaded.tabupcoming > #tabupcoming {
 	display: block;
 }
