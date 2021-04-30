@@ -2,18 +2,6 @@
 
 var tabs = {};
 
-//<![CDATA[
-/*document.addEventListener('DOMContentLoaded', function() {
-	var elem = document.querySelector('.tabs');
-	instance = M.Tabs.init(elem, {
-		swipeable: false
-	});
-	var elems2 = document.querySelectorAll('.pagination');
-	elems2.forEach(element =>(element.classList.remove('hide')));
-	var elem3 = document.getElementById('tab-contents');
-	elem3.classList.add("tabs-loaded");
-});*/
-
 function removeHash () { 
 	var scrollV, scrollH, loc = window.location;
 	if ("replaceState" in history)
@@ -37,24 +25,6 @@ if (window.location.hash) {
 		hash = hash.replace(/#/, "");
 		// console.log("hash: ", hash);
 		removeHash();
-		/*if (document.readyState == 'loading') {
-			window.addEventListener("DOMContentLoaded", function(e) {
-				try {
-					document.getElementById(hash).scrollIntoView(true);
-				} catch(err) {
-					window.location.hash = hash;
-					hash = null;
-				}
-			});
-		} else {
-			try {
-				document.getElementById(hash).scrollIntoView(true);
-			} catch(err) {
-				window.location.hash = hash;
-				hash = null;
-			}
-			
-		}*/
 	}
 }
 
@@ -181,11 +151,19 @@ function changePageIndicator(index) {
 		break;
 	case 14:
 		var page14s = document.querySelectorAll(".page14");
-		var pagenexts = document.querySelectorAll(".pagenext");
 		Array.prototype.forEach.call(page14s, function(page14) {
 			//page14.classList.remove("ripple");
 			page14.classList.add("active");
 			page14.firstElementChild.setAttribute('disabled', true);
+		});
+		break;
+	case 15:
+		var page15s = document.querySelectorAll(".page15");
+		var pagenexts = document.querySelectorAll(".pagenext");
+		Array.prototype.forEach.call(page15s, function(page15) {
+			//page15.classList.remove("ripple");
+			page15.classList.add("active");
+			page15.firstElementChild.setAttribute('disabled', true);
 		});
 		Array.prototype.forEach.call(pagenexts, function(pagenext) {
 			//pagenext.classList.remove("ripple");
@@ -195,56 +173,6 @@ function changePageIndicator(index) {
 		break;
 	}
 }
-
-/*function GoToTab(tabid) {
-	var currTab = instance.index;
-	currTab++;
-	
-	if (tabid == 'prev') {
-		currTab--;
-		switch (currTab) {
-			case 0: return false;
-			case 1: tabid = 'tabintro'; break;
-			case 2: tabid = 'tabstats'; break;
-			case 3: tabid = 'tabfaq'; break;
-			case 4: tabid = 'tab00'; break;
-			case 5: tabid = 'tab100'; break;
-			case 6: tabid = 'tab200'; break;
-			case 7: tabid = 'tab300'; break;
-			case 8: tabid = 'tab400'; break;
-			case 9: tabid = 'tab500'; break;
-			case 10: tabid = 'tab600'; break;
-			case 11: tabid = 'tab700'; break;
-			case 12: tabid = 'tab800'; break;
-			case 13: tabid = 'tab900'; break;
-		}
-	} else if (tabid == 'next') {
-		currTab++;
-		switch (currTab) {
-			case 1: tabid = 'tabintro'; break;
-			case 2: tabid = 'tabstats'; break;
-			case 3: tabid = 'tabfaq'; break;
-			case 4: tabid = 'tab00'; break;
-			case 5: tabid = 'tab100'; break;
-			case 6: tabid = 'tab200'; break;
-			case 7: tabid = 'tab300'; break;
-			case 8: tabid = 'tab400'; break;
-			case 9: tabid = 'tab500'; break;
-			case 10: tabid = 'tab600'; break;
-			case 11: tabid = 'tab700'; break;
-			case 12: tabid = 'tab800'; break;
-			case 13: tabid = 'tab900'; break;
-			case 14: return false;
-		}
-	}
-
-	instance.select(tabid);
-	// $('ul.tabs').tabs('select_tab', tabid);
-	
-	currTab = instance.index;
-	currTab++;
-	changePageIndicator(currTab);
-}*/
 
 function GoToTab(tabid) {
 	// console.log('index before: ' + tabs.index);
@@ -266,7 +194,8 @@ function GoToTab(tabid) {
 			case 11: tabid = 'tab700'; break;
 			case 12: tabid = 'tab800'; break;
 			case 13: tabid = 'tab900'; break;
-			case 14: tabid = 'tabupcoming'; break;
+			case 14: tabid = 'tab1000'; break;
+			case 15: tabid = 'tabupcoming'; break;
 		}
 	} else if (tabid == 'next') {
 		tabs.index++;
@@ -282,10 +211,11 @@ function GoToTab(tabid) {
 			case 9: tabid = 'tab500'; break;
 			case 10: tabid = 'tab600'; break;
 			case 11: tabid = 'tab700'; break;
-			case 12: tabid = 'tab800'; break;
+			case 12: tabid = 'tab800'; break
 			case 13: tabid = 'tab900'; break;
-			case 14: tabid = 'tabupcoming'; break;
-			case 15: return false;
+			case 14: tabid = 'tab1000'; break;
+			case 15: tabid = 'tabupcoming'; break;
+			case 16: return false;
 		}
 	} else {
 		switch (tabid) {
@@ -302,7 +232,8 @@ function GoToTab(tabid) {
 			case 'tab700': tabs.index = 11; break;
 			case 'tab800': tabs.index = 12; break;
 			case 'tab900': tabs.index = 13; break;
-			case 'tabupcoming': tabs.index = 14; break;
+			case 'tab1000': tabs.index = 14; break;
+			case 'tabupcoming': tabs.index = 15; break;
 		}
 	}
 
@@ -318,14 +249,10 @@ function ChangePageAndKeepPosition(callingElement, targetTabID) {
 	
 	GoToTab(targetTabID);
 	
-	/*var hash = window.location.hash;
+	var afterElementPosition = callingElement.getBoundingClientRect().top;
 	
-	if (!(~hash.indexOf("tab"))) {*/
-		var afterElementPosition = callingElement.getBoundingClientRect().top;
-		
-		var mainScrollarea = document.getElementById('main-scrollarea');
-		mainScrollarea.scrollBy(0, afterElementPosition - startingElementPosition);
-	/*}*/
+	var mainScrollarea = document.getElementById('main-scrollarea');
+	mainScrollarea.scrollBy(0, afterElementPosition - startingElementPosition);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -406,6 +333,11 @@ document.addEventListener('DOMContentLoaded', function() {
 				GoToTab('tab900');
 				document.getElementById(hash).scrollIntoView(true);
 				break;
+			case 'eps1000':
+			case 'tab1000':
+				GoToTab('tab1000');
+				document.getElementById(hash).scrollIntoView(true);
+				break;
 			case 'epsupcoming':
 			case 'tabupcoming':
 				GoToTab('tabupcoming');
@@ -457,13 +389,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	/* Email updates subscription modal init */
 	var elem = document.getElementById("dcel-email-subscribe-modal");
 	var instance = M.Modal.init(elem, { onOpenEnd : function() {
-		// $('#dcel-email-subscribe-text').focus();
 		document.getElementById("dcel-email-subscribe-text").focus();
 	}});
 
-	/*$('#dcel-email-subscribe-form-modal').submit(function() {
-		instance.close();
-	});*/
 	document.getElementById("dcel-email-subscribe-form-modal").addEventListener("submit", function() {
 		instance.close();
 	});
