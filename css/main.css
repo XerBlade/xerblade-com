@@ -199,8 +199,12 @@ body.main-body {
 }*/
 
 /* Hide fallback */
-.hide {
+.hide:not(.pagination) {
 	display: none !important;
+}
+
+.pagination.hide {
+	visibility: hidden;
 }
 
 .show {
