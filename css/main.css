@@ -199,12 +199,8 @@ body.main-body {
 }*/
 
 /* Hide fallback */
-.hide:not(.pagination) {
+.hide {
 	display: none !important;
-}
-
-.pagination.hide {
-	visibility: hidden;
 }
 
 .show {
@@ -213,6 +209,11 @@ body.main-body {
 
 span.show {
 	display: inline !important;
+}
+
+.pagination.hide {
+	display: block !important;
+	visibility: hidden;
 }
 
 /* Fix share buttons on small phones */
