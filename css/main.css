@@ -123,6 +123,11 @@ body.main-body {
 	background-color: #D32F2F;
 }
 
+/* Fix hero images not having height defined messing with aspect ratio */
+.card .card-image img {
+	height: auto;
+}
+
 /* Responsive iFrame */
 
 .responsive-iframe-container {
