@@ -50,6 +50,10 @@ h1, h2, h3, h4, h5, h6, .brand-logo, .card-title {
 	font-family: 'Open Sans', 'Trebuchet MS', sans-serif;
 }
 
+strong {
+	font-weight: revert;
+}
+
 /*.dc-list-pos {
 	font-family: 'Open Sans', sans-serif;
 }*/
