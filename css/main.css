@@ -2003,7 +2003,7 @@ abbr[title] {
 }
 
 /* Give decent spacing between items in Fate/Extra Enemy Patterns for visibility */
-.pattern-table .collection-item span {
+.pattern-table .collection-item span:not([class$='-text']) { {
 	padding-right: 1.5em;
 }
 .pattern-table .collection-item h6 {
