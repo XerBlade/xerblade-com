@@ -5,7 +5,7 @@ Here lies the CSS and JS files used by XerBlade.com.
 
 <dl>
   <dt>main.css</dt>
-  <dd>Just as it sounds. It's the mains stylesheet that styles everything on the site.</dd>
+  <dd>Just as it sounds. It's the main stylesheet that styles everything on the site.</dd>
 
   <dt>darktheme.css</dt>
   <dd>Essentially converts everything from main.css into a dark theme. A media attribute on the link tag is used to decide when it should be applied.</dd>
