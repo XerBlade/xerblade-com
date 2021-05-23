@@ -1819,12 +1819,12 @@ div.collapsible-body ul li {
 }
 
 /* Smooth Scrolling */
-html, html #main-scrollarea {
+html {
 	scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
-	html, html #main-scrollarea {
+	html {
 		scroll-behavior: auto;
 	}
 }

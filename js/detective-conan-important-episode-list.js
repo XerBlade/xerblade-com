@@ -251,9 +251,14 @@ function ChangePageAndKeepPosition(callingElement, targetTabID) {
 	
 	var afterElementPosition = callingElement.getBoundingClientRect().top;
 	
-    document.documentElement.style.scrollBehavior = 'auto';
+    const usingSmoothScroll = document.documentElement.style.scrollBehavior == 'smooth'
+    if (usingSmoothScroll) {
+        document.documentElement.style.scrollBehavior = 'auto';
+    }
 	window.scrollBy({left: 0, top: afterElementPosition - startingElementPosition, behavior: 'auto'});
-    document.documentElement.style.scrollBehavior = 'smooth';
+    if (usingSmoothScroll) {
+        document.documentElement.style.scrollBehavior = 'smooth';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
