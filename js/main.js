@@ -77,37 +77,8 @@ if (!!description) {
 
 // Begin Scroll to Top button
  
-	// var offset = 250;
-	
 	var scrollconfig = { threshold: 0 };
 	var pixeltracking = document.getElementById('pixel-to-watch');
- 
-	// var duration = 300
-	var scrollOptions = {behavior: "smooth"};
-	
-	const reduceMotionValue = window
-			.getComputedStyle(document.body)
-			.getPropertyValue('content')
-			.replace(/"/g, '');
-	
-	if (reduceMotionValue == 'reduce') {
-		// duration = 0;
-		scrollOptions = {};
-	}
- 
-	/*jQuery(window).scroll(function() {
- 
-		if (jQuery(this).scrollTop() > offset) {
- 
-			jQuery('#backToTopBtn').fadeIn(duration);
- 
-		} else {
- 
-			jQuery('#backToTopBtn').fadeOut(duration);
- 
-		}
- 
-	});*/
 	
 	
 	
@@ -119,13 +90,9 @@ if (!!description) {
 				if (entry.intersectionRatio > 0 && entry.target == pixeltracking) {
 					backToTopBtnContainer.classList.remove("visible");
 					backToTopBtn.tabIndex = -1;
-					// jQuery('#backToTopBtn').fadeOut(duration);
-					// console.log('Fade out');
 				} else if (entry.intersectionRatio <= 0 && entry.target == pixeltracking) {
 					backToTopBtnContainer.classList.add("visible");
 					backToTopBtn.tabIndex = 0;
-					// jQuery('#backToTopBtn').fadeIn(duration);
-					// console.log('Fade in');
 				}
 			});
 		}
@@ -134,24 +101,7 @@ if (!!description) {
 		observer.observe(pixeltracking);
 	} else {
 		document.getElementById("backToTopBtnContainer").classList.add("visible");
-		// jQuery('#backToTopBtn').show();
 	}
- 
-	document.getElementById("backToTopBtn").addEventListener("click", function(event) {
- 
-		event.preventDefault();
- 
-		//jQuery('html, body').animate({scrollTop: 0}, duration);
-		try {
-			pixeltracking.scrollIntoView(scrollOptions);
-		} catch (e) {
-			//fallback when scrollintoview options is not supported
-			pixeltracking.scrollIntoView(true);
-		}
- 
-		return false;
- 
-	});
  
 
 
@@ -282,12 +232,7 @@ if (!!disquslink) {
 		
 		var disquspanel = document.getElementById("disqus_thread");
 
-		try {
-			disquspanel.scrollIntoView(scrollOptions);
-		} catch (e) {
-			//fallback when scrollintoview options is not supported
-			disquspanel.scrollIntoView(true);
-		}
+		disquspanel.focus();
 
 		return false;
 

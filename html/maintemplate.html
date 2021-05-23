@@ -883,7 +883,7 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 					</b:includable>
 					<b:includable id='comments' var='post'>
 					  <div class='comments card-panel' id='comments'>
-						<div id="disqus_thread">
+						<div id="disqus_thread" tabindex="-1">
 							<div id="disqus_empty">
 								<div class='center-align hide-on-noscript'>
 									<div class="preloader-wrapper active" style='display:inline-block'>
@@ -2345,7 +2345,7 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 					  </b:includable>
 					<b:includable id='threaded_comments' var='post'>
 						<div class='comments card-panel' id='comments'>
-							<div id="disqus_thread">
+							<div id="disqus_thread" tabindex="-1">
 								<div id="disqus_empty">
 									<div class='center-align hide-on-noscript'>
 										<div class="preloader-wrapper active" style='display:inline-block'>
@@ -2541,223 +2541,13 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
     };
 </script>
 
-<b:if cond='data:blog.pageType == &quot;item&quot;'>
 
-	<!--<style type='text/css'>
-		#comments {display:none;}
-	</style>-->
-
-	<!--<script type='text/javascript'>
-	//<![CDATA[
-		(function() {
-			var bloggerjs = document.createElement('script');
-			bloggerjs.type = 'text/javascript';
-			bloggerjs.defer = 'defer';
-			bloggerjs.src = '//'+disqus_shortname+'.disqus.com/blogger_item.js';
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bloggerjs);
-		})();
-	//]]>
-	</script>-->
-	
-	<!--<script>
-	//<![CDATA[
-	'use strict';
-	
-	function loadDisqus(target) {
-		/* Prepare the trigger and target */
-		var is_disqus_empty = document.getElementById('disqus_empty'),
-		  /*disqus_target   = document.getElementById('disqus_thread'),*/
-		    disqus_embed    = document.createElement('script');
-
-		/* Load script asynchronously only when the target exists */
-		if (target && is_disqus_empty) {
-			disqus_embed.type = 'text/javascript';
-			disqus_embed.async = true;
-			disqus_embed.src = 'https://xerblade.disqus.com/embed.js';
-			document.head.appendChild(disqus_embed);
-			is_disqus_empty.parentNode.removeChild(is_disqus_empty);
-		}
-	}
-	
-	function loadRelatedPosts(target) {
-
-			var related_embed = document.createElement('script');
-
-			related_embed.type = 'text/javascript';
-			related_embed.async = true;
-			related_embed.setAttribute('crossorigin', 'anonymous');
-			related_embed.onerror = function() { throw(new Error('Failed to load ' + this.src)); }
-			related_embed.src = 'https://gistcdn.githack.com/XerBlade/769370459ff86592794d9b1dcf701345/raw/aae4c7d91a4fef7369b5a97b7d13f3e5b6aa523c/relatedposts.min.js';
-			document.head.appendChild(related_embed);
-		}
-	
-	
-	/*
-	 * Load disqus only when the document is scrolled till the top of the
-	 * section where comments are supposed to appear.
-	 */
-	var disqus_target = document.getElementById('disqus_thread');
-	var related_target = document.getElementById('related-posts');
-	var config = {
-		rootmargin: '150px 0px',
-		threshold: 0.01
-	};
-	
-	var hash = window.location.hash;
-	if (hash) {
-		hash = hash.replace(/#/, "");
-	}
-	
-	if ('IntersectionObserver' in window && !(hash.indexOf("comment-") == 0)) {
-		function onIntersection(entries) {
-			if (!!entries) {
-				entries.forEach(function(entry) {
-					if (entry.intersectionRatio > 0 && entry.target == disqus_target) {
-						observer.unobserve(entry.target);
-						loadDisqus(entry.target);
-						console.log('Disqus loaded.');
-					} else if (entry.intersectionRatio > 0 && entry.target == related_target) {
-						observer.unobserve(entry.target);
-						loadRelatedPosts(entry.target);
-						console.log('Related posts loaded.');
-					}
-				});
-			}
-		}
-		let observer = new IntersectionObserver(onIntersection, config);
-		if (document.readyState == 'loading') {
-			window.addEventListener('DOMContentLoaded', function(event) {
-				observer.observe(disqus_target);
-				observer.observe(related_target);
-			});
-		} else {
-			observer.observe(disqus_target);
-			observer.observe(related_target);
-		}
-	} else {
-		if (document.readyState == 'loading') {
-			window.addEventListener('DOMContentLoaded', function(event) {
-				loadRelatedPosts(related_target);
-				loadDisqus(disqus_target);
-			});
-		} else {
-			loadRelatedPosts(related_target);
-			loadDisqus(disqus_target);
-		}
-	}
-	
-	//]]>
-	</script>-->
-	<!--<script>
-	&quot;use strict&quot;;function loadDisqus(e){var t=document.getElementById(&quot;disqus_empty&quot;),a=document.createElement(&quot;script&quot;);e&amp;&amp;t&amp;&amp;(a.type=&quot;text/javascript&quot;,a.async=!0,a.src=&quot;https://xerblade.disqus.com/embed.js&quot;,document.head.appendChild(a),t.parentNode.removeChild(t))}function loadRelatedPosts(e){var t=document.createElement(&quot;script&quot;);t.type=&quot;text/javascript&quot;,t.async=!0,t.setAttribute(&quot;crossorigin&quot;,&quot;anonymous&quot;),t.onerror=function(){throw new Error(&quot;Failed to load &quot;+this.src)},t.src=&quot;https://gistcdn.githack.com/XerBlade/769370459ff86592794d9b1dcf701345/raw/aae4c7d91a4fef7369b5a97b7d13f3e5b6aa523c/relatedposts.min.js&quot;,document.head.appendChild(t)}var disqus_target=document.getElementById(&quot;disqus_thread&quot;),related_target=document.getElementById(&quot;related-posts&quot;),config={rootmargin:&quot;150px 0px&quot;,threshold:.01},hash=window.location.hash;if(hash&amp;&amp;(hash=hash.replace(/#/,&quot;&quot;)),&quot;IntersectionObserver&quot;in window&amp;&amp;0!=hash.indexOf(&quot;comment-&quot;)){function onIntersection(t){t&amp;&amp;t.forEach(function(t){t.intersectionRatio&gt;0&amp;&amp;t.target==disqus_target?(e.unobserve(t.target),loadDisqus(t.target),console.log(&quot;Disqus loaded.&quot;)):t.intersectionRatio&gt;0&amp;&amp;t.target==related_target&amp;&amp;(e.unobserve(t.target),loadRelatedPosts(t.target),console.log(&quot;Related posts loaded.&quot;))})}let e=new IntersectionObserver(onIntersection,config);&quot;loading&quot;==document.readyState?window.addEventListener(&quot;DOMContentLoaded&quot;,function(t){e.observe(disqus_target),e.observe(related_target)}):(e.observe(disqus_target),e.observe(related_target))}else&quot;loading&quot;==document.readyState?window.addEventListener(&quot;DOMContentLoaded&quot;,function(e){loadRelatedPosts(related_target),loadDisqus(disqus_target)}):(loadRelatedPosts(related_target),loadDisqus(disqus_target));
-	</script>-->
-	
-</b:if>
-<b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-
-	<!--<style type='text/css'>
-		#comments {display:none;}
-	</style>-->
-
-	<b:if cond='data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/pages.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/tags.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/search.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/follow.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/about.html&quot;'>
-		<!--<script type='text/javascript'>
-		//<![CDATA[
-		'use strict';
+	<b:if cond='data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/pages.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/tags.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/search.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/follow.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/about.html&quot;'>
 		
-		function loadDisqus(target) {
-			/* Prepare the trigger and target */
-			var is_disqus_empty = document.getElementById('disqus_empty'),
-			  /*disqus_target   = document.getElementById('disqus_thread'),*/
-				disqus_embed    = document.createElement('script');
-
-			/* Load script asynchronously only when the target exists */
-			if (target && is_disqus_empty) {
-				disqus_embed.type = 'text/javascript';
-				disqus_embed.async = true;
-				disqus_embed.src = 'https://xerblade.disqus.com/embed.js';
-				document.head.appendChild(disqus_embed);
-				is_disqus_empty.parentNode.removeChild(is_disqus_empty);
-			}
-		}
-		
-		function loadRelatedPosts(target) {
-
-			var related_embed = document.createElement('script');
-
-			related_embed.type = 'text/javascript';
-			related_embed.async = true;
-			related_embed.setAttribute('crossorigin', 'anonymous');
-			related_embed.onerror = function() { throw(new Error('Failed to load ' + this.src)); }
-			related_embed.src = 'https://gistcdn.githack.com/XerBlade/769370459ff86592794d9b1dcf701345/raw/aae4c7d91a4fef7369b5a97b7d13f3e5b6aa523c/recentposts.min.js';
-			document.head.appendChild(related_embed);
-		}
-		
-		
-		/*
-		 * Load disqus only when the document is scrolled till the top of the
-		 * section where comments are supposed to appear.
-		 */
-		var disqus_target = document.getElementById('disqus_thread');
-		var related_target = document.getElementById('related-posts');
-		var config = {
-			rootmargin: '150px 0px',
-			threshold: 0.01
-		};
-		
-		var hash = window.location.hash;
-		if (hash) {
-			hash = hash.replace(/#/, "");
-		}
-		
-		if ('IntersectionObserver' in window && !(hash.indexOf("comment-") == 0)) {
-			function onIntersection(entries) {
-				if (!!entries) {
-					entries.forEach(function(entry) {
-						if (entry.intersectionRatio > 0 && entry.target == disqus_target) {
-							observer.unobserve(entry.target);
-							loadDisqus(entry.target);
-							console.log('Disqus loaded.');
-						} else if (entry.intersectionRatio > 0 && entry.target == related_target) {
-							observer.unobserve(entry.target);
-							loadRelatedPosts(entry.target);
-							console.log('Related posts loaded.');
-						}
-					});
-				}
-			}
-			let observer = new IntersectionObserver(onIntersection, config);
-			if (document.readyState == 'loading') {
-				window.addEventListener('DOMContentLoaded', function(event) {
-					observer.observe(disqus_target);
-					observer.observe(related_target);
-				});
-			} else {
-				observer.observe(disqus_target);
-				observer.observe(related_target);
-			}
-		} else {
-			if (document.readyState == 'loading') {
-				window.addEventListener('DOMContentLoaded', function(event) {
-					loadRelatedPosts(related_target);
-					loadDisqus(disqus_target);
-				});
-			} else {
-				loadRelatedPosts(related_target);
-				loadDisqus(disqus_target);
-			}
-		}
-	
-		//]]>
-		</script>-->
-		<!--<script>
-		&quot;use strict&quot;;function loadDisqus(e){var t=document.getElementById(&quot;disqus_empty&quot;),a=document.createElement(&quot;script&quot;);e&amp;&amp;t&amp;&amp;(a.type=&quot;text/javascript&quot;,a.async=!0,a.src=&quot;https://xerblade.disqus.com/embed.js&quot;,document.head.appendChild(a),t.parentNode.removeChild(t))}function loadRelatedPosts(e){var t=document.createElement(&quot;script&quot;);t.type=&quot;text/javascript&quot;,t.async=!0,t.setAttribute(&quot;crossorigin&quot;,&quot;anonymous&quot;),t.onerror=function(){throw new Error(&quot;Failed to load &quot;+this.src)},t.src=&quot;https://gistcdn.githack.com/XerBlade/769370459ff86592794d9b1dcf701345/raw/aae4c7d91a4fef7369b5a97b7d13f3e5b6aa523c/recentposts.min.js&quot;,document.head.appendChild(t)}var disqus_target=document.getElementById(&quot;disqus_thread&quot;),related_target=document.getElementById(&quot;related-posts&quot;),config={rootmargin:&quot;150px 0px&quot;,threshold:.01},hash=window.location.hash;if(hash&amp;&amp;(hash=hash.replace(/#/,&quot;&quot;)),&quot;IntersectionObserver&quot;in window&amp;&amp;0!=hash.indexOf(&quot;comment-&quot;)){function onIntersection(t){t&amp;&amp;t.forEach(function(t){t.intersectionRatio&gt;0&amp;&amp;t.target==disqus_target?(e.unobserve(t.target),loadDisqus(t.target),console.log(&quot;Disqus loaded.&quot;)):t.intersectionRatio&gt;0&amp;&amp;t.target==related_target&amp;&amp;(e.unobserve(t.target),loadRelatedPosts(t.target),console.log(&quot;Related posts loaded.&quot;))})}let e=new IntersectionObserver(onIntersection,config);&quot;loading&quot;==document.readyState?window.addEventListener(&quot;DOMContentLoaded&quot;,function(t){e.observe(disqus_target),e.observe(related_target)}):(e.observe(disqus_target),e.observe(related_target))}else&quot;loading&quot;==document.readyState?window.addEventListener(&quot;DOMContentLoaded&quot;,function(e){loadRelatedPosts(related_target),loadDisqus(disqus_target)}):(loadRelatedPosts(related_target),loadDisqus(disqus_target));
-		</script>-->
-		<b:else/>
 		<style type='text/css'>
 			#comments {display:none;}
 		</style>
 	</b:if>
-</b:if>
 
 	<!--<script type='text/javascript'>
 	//<![CDATA[
