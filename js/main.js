@@ -272,30 +272,6 @@ if (disqus_target && related_target) {
 
 // End lazyload Disqus and Related Posts
 
-// Start smooth scroll to comment thread
-
-var disquslink = document.getElementById("disqus-link");
-if (!!disquslink) {
-	disquslink.addEventListener("click", function(event) {
-
-		event.preventDefault();
-		
-		var disquspanel = document.getElementById("disqus_thread");
-
-		try {
-			disquspanel.scrollIntoView(scrollOptions);
-		} catch (e) {
-			//fallback when scrollintoview options is not supported
-			disquspanel.scrollIntoView(true);
-		}
-
-		return false;
-
-	});
-}
-
-// End smooth scroll to comment thread
-
 
 // Begin mobile native share button
 

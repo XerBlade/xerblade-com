@@ -1818,18 +1818,18 @@ div.collapsible-body ul li {
     white-space: nowrap
 }
 
-/* Begin Noscript */
 /* Smooth Scrolling */
-html.no-js, html.no-js #main-scrollarea {
+html, html #main-scrollarea {
 	scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
-	html.no-js, html.no-js #main-scrollarea {
+	html, html #main-scrollarea {
 		scroll-behavior: auto;
 	}
 }
 
+/* Begin Noscript */
 /* Show back to top button always */
 .no-js #backToTopBtnContainer {
     pointer-events: auto;
