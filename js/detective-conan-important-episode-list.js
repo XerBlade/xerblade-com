@@ -251,7 +251,7 @@ function ChangePageAndKeepPosition(callingElement, targetTabID) {
 	
 	var afterElementPosition = callingElement.getBoundingClientRect().top;
 	
-    const usingSmoothScroll = document.documentElement.style.scrollBehavior == 'smooth'
+    const usingSmoothScroll = getComputedStyle(document.documentElement).scrollBehavior == 'smooth';
     if (usingSmoothScroll) {
         document.documentElement.style.scrollBehavior = 'auto';
     }
