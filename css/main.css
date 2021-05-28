@@ -1611,8 +1611,8 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 90vh;
-	width: 90vw;
+	height: 90vh !important;
+	width: 90vw !important;
 	margin: 5vh 5vw;
 	max-width: none;
 	object-fit: contain;
