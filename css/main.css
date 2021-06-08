@@ -101,6 +101,7 @@ body.main-body {
 /* Fix hero images not having height defined messing with aspect ratio */
 .card .card-image img {
 	height: auto;
+    width: 100%;
 }
 
 /* Responsive iFrame */
