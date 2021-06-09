@@ -123,10 +123,10 @@ var lazyconfig = {
 // Which "related posts" should we be using?
 var relatedsrc, relatedtitle;
 if(window.location.href.indexOf("\/p\/") > -1) {
-	relatedsrc = "https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/1160817b179aa4539a8ca508c33f1cf10eca938f/js/recentposts.js";
+	relatedsrc = "https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/4d6d686cd59df2e58b3f347bbbf472205b422e7f/js/recentposts.min.js";
 	relatedtitle = 'recent posts';
 } else {
-	relatedsrc = "https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/1160817b179aa4539a8ca508c33f1cf10eca938f/js/relatedposts.js";
+	relatedsrc = "https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/1160817b179aa4539a8ca508c33f1cf10eca938f/js/relatedposts.min.js";
 	relatedtitle = 'related posts';
 }
 	
