@@ -109,7 +109,7 @@ function addStaticPages() {
 	// Fate/Extra walkthrough
 	var entry3 = {};
 	entry3.title = {$t: "Fate\/Extra Walkthrough"};
-	entry3.media$thumbnail = {url: "https:\/\/2.bp.blogspot.com\/-arRYKUGDMCw\/W0f8mH540FI\/AAAAAAABr9U\/XztFFaEntlQ7EC6udj7269OWd1E-FFPCACLcBGAs\/s72-c\/ExtraFeMC.jpg"};
+	entry3.media$thumbnail = {url: "https:\/\/1.bp.blogspot.com\/-Z_GGztl3TUs\/YMB1tzLLFkI\/AAAAAAAB9kc\/dx5AtRTAU0EfUIy9IPNJkfDs6g7RVND1wCLcBGAsYHQ\/s72-c\/Fate%2BExtra%2BMain%2BHeader.jpg"};
 	entry3.content = {$t : ""};
 	entry3.link = [{rel: "alternate", href: "https:\/\/www.xerblade.com\/p\/fateextra-walkthrough.html"}];
 	container.feed.entry.push(entry3);
