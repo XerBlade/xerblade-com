@@ -40,8 +40,8 @@
 	</script>
 	</b:if>
 
-	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection" type="text/css"/>
-	<link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/360a5fcc5dcec58216e10cb00da44094a68c44e1/css/main.min.css" type="text/css"/>
+	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous"/>
+	<link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/360a5fcc5dcec58216e10cb00da44094a68c44e1/css/main.min.css" integrity="sha512-J1kaSzs4/AVaUyk6p7Yzym+u2Kt2lwahLq7B9DGGCMp/i1POxsGGNVBkYoc3hSm/ICCxys5jL5JHXWzxFj2lhg==" crossorigin="anonymous"/>
 	<link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/6a5fc3134732434d744c90e453ac58ee484bfc00/css/darktheme.min.css" type="text/css"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com"/>
 	<link rel="preconnect" href="https://www.google-analytics.com"/>
@@ -114,39 +114,18 @@
 
 
 <script defer='defer' src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" onerror="function() { throw(new Error('Failed to load ' + this.src)); }"></script>
-<script type='text/javascript' defer='defer' crossorigin='anonymous' onerror="function() { throw(new Error('Failed to load ' + this.src)); }" src='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/e69634072267bf800505ebe632a1e321f77235dd/js/darktheme.min.js'></script>
+<script type='text/javascript' defer='defer' crossorigin='anonymous' onerror="function() { throw(new Error('Failed to load ' + this.src)); }" src='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/e69634072267bf800505ebe632a1e321f77235dd/js/darktheme.min.js' integrity="sha512-jQ2s4kYtkjZ1yPV6bJ35h9JJ7Euy4E44qsB5MVg9vE4Kj6YBYc29BlSIZO5VoYeW9IA5yImowBWMDRZxywTmbQ=="></script>
 
 
-<script type='text/javascript' defer='defer' crossorigin='anonymous' onerror="function() { throw(new Error('Failed to load ' + this.src)); }" src='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/2b589984abf5cf3a93f8afb470d91c8ec66e9f5d/js/main.min.js'></script>
+<script type='text/javascript' defer='defer' crossorigin='anonymous' onerror="function() { throw(new Error('Failed to load ' + this.src)); }" src='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/2b589984abf5cf3a93f8afb470d91c8ec66e9f5d/js/main.min.js' integrity="sha512-hZgNbXvLFPywrMsYnx0vhXGOfFnLMIkpq/cKKZnLXcEm6uNUKvM3G4av2Gu7n5rizBTM4lmoaBB7XnDZ+Og3rA=="></script>
 
 <b:if cond='data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/detective-conan-important-episode-list.html&quot;'>
-<script type='text/javascript' defer='defer' crossorigin='anonymous' onerror="function() { throw(new Error('Failed to load ' + this.src)); }" src='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/c937ffbe5e8844ad7a62674951b3fac564de9fd7/js/detective-conan-important-episode-list.min.js'></script>
+<script type='text/javascript' defer='defer' crossorigin='anonymous' onerror="function() { throw(new Error('Failed to load ' + this.src)); }" src='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/c937ffbe5e8844ad7a62674951b3fac564de9fd7/js/detective-conan-important-episode-list.min.js' integrity="sha512-Mi+0jxmNizTIV0EyEg1QO5EW51LKa92XlhctUpBBQ6V/PBRueDv0v/BkRgIOATgRo974PUGowqjRcWkxms1CkQ=="></script>
 </b:if>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js' type='text/javascript' defer='defer' onerror="function() { throw(new Error('Failed to load ' + this.src)); }"/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js' type='text/javascript' defer='defer' integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin='anonymous' onerror="function() { throw(new Error('Failed to load ' + this.src)); }"/>
 
 
-
-
-
-<!-- Track outbound links -->
-<!--<script>
-//<![CDATA[
-  /**
-  * Function that tracks a click on an outbound link in Analytics.
-  * This function takes a valid URL string as an argument, and uses that URL string
-  * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-  * using 'navigator.sendBeacon' in browser that support it.
-  */
-  var trackOutboundLink = function(url) {
-	ga('send', 'event', 'outbound', 'click', url, {
-	  'transport': 'beacon',
-	  'hitCallback': function(){document.location = url;}
-	});
-  }
-//]]>
-</script>-->
-<!-- End Track outbound liks -->
 
     &lt;style type=&quot;text/css&quot;&gt;
 &lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
@@ -225,8 +204,8 @@
     
 	
 
-<link href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css' media='screen,projection' rel='stylesheet' type='text/css'/>
-<link href='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/360a5fcc5dcec58216e10cb00da44094a68c44e1/css/main.min.css' media='all' rel='stylesheet' type='text/css'/>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css' media='screen,projection' rel='stylesheet' integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous"/>
+<link href='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/360a5fcc5dcec58216e10cb00da44094a68c44e1/css/main.min.css' media='all' rel='stylesheet' integrity="sha512-J1kaSzs4/AVaUyk6p7Yzym+u2Kt2lwahLq7B9DGGCMp/i1POxsGGNVBkYoc3hSm/ICCxys5jL5JHXWzxFj2lhg==" crossorigin="anonymous"/>
 <b:if cond='data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/fateextra-walkthrough-enemy-patterns.html&quot;'>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet" media='screen,projection'/>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather&amp;family=Roboto+Slab&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet" media='print'/>
@@ -274,54 +253,12 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 
 <noscript>
 	<link href='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/6a5fc3134732434d744c90e453ac58ee484bfc00/css/darktheme.min.css' media='screen and (prefers-color-scheme: dark)' rel='stylesheet' type='text/css' id='darkthemestylesheet'/>
-	<!--<style>
-		/* Smooth Scrolling */
-		html {
-			scroll-behavior: smooth;
-		}
-		
-		@media (prefers-reduced-motion: reduce) {
-			html {
-				scroll-behavior: auto;
-			}
-		}
-		
-		/* Show back to top button always */
-		#backToTopBtn {
-			display: block !important;
-		}
-		
-		
-      	/* Hide JS navbar elements */
-        .hide-on-noscript {
-          display: none !important;
-        }
-        @media only screen and (max-width: 600px) {
-          .hide-on-noscript-small {
-            display: none !important;
-          }
-		  
-		  /*nav ul a {
-			padding: 0 12px;
-		  }*/
-        }
-		@media only screen and (min-width: 601px) {
-			nav .brand-logo.logo-main {
-				padding: 0 18px;
-			}
-		}
-     
-
-	</style>-->
-	<!--<style>
-	html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}#backToTopBtn{display:block!important}.hide-on-noscript{display:none!important}@media only screen and (max-width:600px){.hide-on-noscript-small{display:none!important}nav ul a{padding:0 12px}}@media only screen and (min-width:601px){nav .brand-logo.logo-main{padding:0 18px}}
-	</style>-->
 </noscript>
 	
 <!-- Google Analytics -->
 <script type='text/javascript' defer='defer' src='https://www.google-analytics.com/analytics.js'></script>
-<script type='text/javascript' defer='defer' src='https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js'></script>
-<script crossorigin='anonymous' type='text/javascript' defer='defer' src='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/e69634072267bf800505ebe632a1e321f77235dd/js/advanced-analytics.min.js'></script>
+<script type='text/javascript' defer='defer' src='https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js' integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+<script crossorigin='anonymous' type='text/javascript' defer='defer' src='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/e69634072267bf800505ebe632a1e321f77235dd/js/advanced-analytics.min.js' integrity="sha512-dlWuc2nR66cwFyvC0juK62SrnqorTswQj9F1l0W86AWRAmRd8PgWq2wDYx1mxHN5SipvoGJTAbBQBFSra5QXtQ=="></script>
 <!-- End Google Analytics -->
 
 <script type="text/javascript" src="https://www.google.com/cse/query_renderer.js" defer='defer'></script>
