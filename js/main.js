@@ -16,9 +16,8 @@ function formatDateTime(isod) {
 	var d = moment(isod);
 	
 	var timeString = d.format('LLLL');
-	var timezoneAbbrv = moment.tz.zone(moment.tz.guess()).abbr(new Date().getTimezoneOffset());
 
-	return timeString + " " + timezoneAbbrv;
+	return timeString;
 }
 function formatDateOnly(isod) {
 
