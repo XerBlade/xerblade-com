@@ -759,9 +759,43 @@ div.clear {
 		max-width: 100%;
 		height: auto;
 	}
-	.post-single-outer {
-		margin: 0;
-	}
+    .main-body, #main-scrollarea, .post-single-outer, .blog-posts {
+        padding: 0;
+        margin: 0;
+    }
+
+    .post-labels > a {
+        margin-right: 1ch;
+    }
+
+    h1, h2, h3, h4, h5, h6, img, .post-title, *[class^="post-header"] {
+        page-break-after:avoid; 
+        page-break-inside:avoid;
+    }
+
+    h4 {
+        font-size: 2.28rem;
+        line-height: 110%;
+        margin: 1.52rem 0 .912rem 0;
+    }
+
+    h5 {
+        font-size: 1.64rem;
+        line-height: 110%;
+        margin: 1.0933333333rem 0 .656rem 0;
+    }
+
+    h6 {
+        font-size: 1.15rem;
+        line-height: 110%;
+        margin: .7666666667rem 0 .46rem 0;
+    }
+
+    .collection .collection-item {
+        display: block;
+        padding: 10px 20px;
+        border-bottom: 1px solid #000000;
+    }
     /* Serif fonts work better on paper */
     html, button, input, optgroup, select, textarea {
         font-family: 'Roboto Slab', Georgia, serif;
@@ -772,7 +806,6 @@ div.clear {
 
     .dc-list-pos .dc-list-no {
         font-family: 'Merriweather', 'Lucida Bright', serif;
-        font-weight: 600;
     }
 }
 
