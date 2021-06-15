@@ -293,15 +293,15 @@ const modalTriggers = document.querySelectorAll('.modal-trigger');
 modalTriggers.forEach(trigger => {
     const target = trigger.dataset.target;
     const modal = document.getElementById(target);
-    trigger.onclick = () => {
+    trigger.onclick = (e) => {
         modal.classList.add('open');
-        modal.querySelector('input[type="text"]').focus();
+        modal.querySelector('input[required]').focus();
         const overlay = document.querySelector('.modal-overlay');
         overlay.onclick = () => {
             modal.classList.remove('open');
         }
-        return false;
     };
+    trigger.href = 'javascript:void(0)';
     modal.querySelector('form').onsubmit = () => {
         modal.classList.remove('open');
     };
