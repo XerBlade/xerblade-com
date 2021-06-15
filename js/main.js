@@ -302,9 +302,9 @@ modalTriggers.forEach(trigger => {
         }
     };
     trigger.href = 'javascript:void(0)';
-    modal.querySelector('form').onsubmit = () => {
-        modal.classList.remove('open');
-    };
+    modal.querySelector('form').addEventListener('submit', () => {
+        modal.classList.remove('open')
+    });
     modal.querySelector('.modal-close').onclick = () => {
         modal.classList.remove('open');
     }
