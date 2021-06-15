@@ -392,14 +392,5 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	}
 	
-	/* Email updates subscription modal init */
-	var elem = document.getElementById("dcel-email-subscribe-modal");
-	var instance = M.Modal.init(elem, { onOpenEnd : function() {
-		document.getElementById("dcel-email-subscribe-text").focus();
-	}});
-
-	document.getElementById("dcel-email-subscribe-form-modal").addEventListener("submit", function() {
-		instance.close();
-	});
 });
 //]]>

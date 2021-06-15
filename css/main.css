@@ -1161,19 +1161,6 @@ body {
 	left: 0;
 }
 
-/* Swap out simple search for popup search button when JS is loaded */
-#search-modal-button {
-    display: none;
-}
-
-.search-loaded #search-nojs {
-    display: none;
-}
-
-.search-loaded #search-modal-button {
-    display: inline-block;
-}
-
 /* Indicator that sidenav button is not ready */
 .nav-svg .progress {
     position: absolute;
@@ -1834,7 +1821,36 @@ abbr[title] {
     text-indent: -17px;
 }
 
+/* Open and close modals */
+.modal {
+    z-index: 1003;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    top: 4%;
+    transform: scaleX(0.8) scaleY(0.8);
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out, top 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
 
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+    top: 10%;
+    transform: scaleX(1) scaleY(1);
+}
+
+.modal-overlay {
+    z-index: 1002;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.modal.open ~ .modal-overlay {
+    visibility: visible;
+    opacity: 0.5;
+}
 
 /* Stuff moved from template-skin for brevity */
 @media (min-width:1200px) {
