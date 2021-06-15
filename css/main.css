@@ -1829,7 +1829,7 @@ abbr[title] {
     opacity: 0;
     top: 4%;
     transform: scaleX(0.8) scaleY(0.8);
-    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out, top 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: visibility 0s linear 0.2s, opacity 0.2s ease-in, top 0.2s ease-in, transform 0.2s ease-in;
 }
 
 .modal.open {
@@ -1837,6 +1837,7 @@ abbr[title] {
     opacity: 1;
     top: 10%;
     transform: scaleX(1) scaleY(1);
+    transition: visibility 0s, opacity 0.2s ease-in, top 0.2s ease-in, transform 0.2s ease-in;
 }
 
 .modal-overlay {
@@ -1844,12 +1845,20 @@ abbr[title] {
     display: block;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    transition: visiblity 0s linear 0.2s, opacity 0.2s ease-in;
 }
 
 .modal.open ~ .modal-overlay {
     visibility: visible;
     opacity: 0.5;
+    transition: visibility 0s, opacity 0.2s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal {
+        top: 10%;
+        transform: scaleX(1) scaleY(1);
+    }
 }
 
 /* Stuff moved from template-skin for brevity */
