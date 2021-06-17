@@ -19,13 +19,6 @@ strong {
 	font-size: 1.05em;
 }
 
-/* Fix icon alignment for header icons and the like */
-.post-header-home .material-icons,
-.post-header .material-icons {
-	vertical-align: middle;
-	margin-top: -3px;
-}
-
 /* text sizes */
 
 html {
@@ -128,46 +121,19 @@ body.main-body {
 .responsive-iframe-container-width-only iframe,   
 .responsive-iframe-container-width-only object,  
 .responsive-iframe-container-width-only embed {
-	/* position: absolute;
-	top: 0;
-	left: 0; */
 	width: 100%;
 }
-
-/* Main text colors */
-/*.body-fauxcolumn-outer, body,
-.post {
-    color: #616161;
-}
-.post-title, .sidebar .widget-content a,
-.sidebar ul a, #related-posts h3,
-.Label .widget-content li a, .Label li a {
-	color: #212121;
-}
-.post blockquote, #header h1,
-#header a, #header a:hover,
-.post h2 a:hover {
-	color: #9e9e9e;
-}*/
-
 
 /* Correct anchor positions for fixed header */
 .anchor{
 	float: left;
 	display: block;
-	/*height: 64px;*/ /*same height as header*/
-	/*margin-top: -64px;*/ /*same height as header*/
 	visibility: hidden;
 }
 
 .card .card-content .anchor + p {
 	margin-block-start: auto;
 }
-
-/* Fix dropdown widths */
-/*.dropdown-content {
-	word-break: keep-all;
-}*/
 
 /* Hide fallback */
 .hide {
@@ -186,13 +152,6 @@ span.show {
 	display: block !important;
 	visibility: hidden;
 }
-
-/* Fix share buttons on small phones */
-/*@media only screen and (max-width: 600px) {
-  .share_pfb,.share_pgo,.share_pli,.share_ptwi,.share_pred {
-	  padding:6px 6px;
-  }
-}*/
 
 /* Update banners */
 .banner-update {
@@ -334,12 +293,6 @@ span.show {
 	color: rgba(255,255,255,0.87);
     font-size: 1.125em;
 }
-/*.breadcrumb:last-child {
-	color: rgba(21,21,21,1);
-}
-.breadcrumb:before {
-	color: rgba(21,21,21,0.7) !important;
-}*/
 .breadcrumb > a {
 	color: inherit !important;
 }
@@ -572,30 +525,6 @@ body.main-body {
     background: #00c3f3
 }
 
-/*.share-btn-pli {
-    background: #0274b3
-}
-
-.share-btn-pli:hover {
-    background: #0894c6
-}
-
-.share-btn-pli:focus {
-    background: #00528d
-}*/
-
-/*.share-btn-pgo {
-    background: #db4a37
-}
-
-.share-btn-pgo:hover {
-    background: #e05f4a
-}
-
-.share-btn-pgo:focus {
-    background: #d22113
-}*/
-
 .share-btn-pred {
     background: #df0500
 }
@@ -620,9 +549,6 @@ body.main-body {
 /* Show next-prev page buttons on left and fix shadow */
 
 #blog-pager {
-	/*text-align: left;*/
-	/*overflow: visible;
-	margin: 1em 0;*/
 	padding: 0 12px;
 }
 
@@ -684,6 +610,7 @@ nav .brand-logo.logo-main {
 	header.container nav.container {
 		margin: 0;
 	}
+    
 }
 
 /* Make room for navigation rail */
@@ -719,7 +646,6 @@ nav .brand-logo.logo-main {
 
 /* Enbolden navbar item for current view */
 .sidenav li.active > a {
-	/*font-weight: bold;*/
 	color: #C62828;
 	background-color: rgba(0,0,0,0.05);
 }
@@ -813,18 +739,6 @@ div.clear {
 .circle source, .circle img {
 	border-radius: 50%;
 }
-
-/* Make card-image class work with picture tag */
-/*.card .card-image source {
-    display: block;
-    border-radius: 2px 2px 0 0;
-    position: relative;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}*/
 
 /* Make responsive-image class work with picture tag */
 source.responsive-img, .responsive-img img, .responsive-img source {
@@ -1037,9 +951,6 @@ body {
 }
 
 /* Force Google AdSense's absolutely in no way responsive ads that they call responsive because clearly Google has no clue what that even means to at least not completely break actual responsive layouts */
-/*.google-auto-placed {
-   overflow-y: hidden;*/ /* Also, that this works is a testament to just how weird the CSS overflow property actually behaves in practice *//*
-}*/
 .blog-posts {
 	overflow-x: hidden;
 }
@@ -1075,11 +986,6 @@ body {
 		line-height: 64px;
 	}
 }
-/*@media only screen and (max-width: 340px) {
-	nav .right .nav-svg {
-		padding: 0 10px;
-	}
-}*/
 
 .btn svg {
 	fill: #fff;
@@ -1600,15 +1506,6 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 	margin: 0;
 }
 
-/* The auto-placed ads that take up the entire freaking screen need to go */
-/*@media (min-width: 993px) {
-	.main-post-body .google-auto-placed,
-	.main-post-body .google-auto-placed * {
-		max-height: 30vh;
-		overflow: hidden;
-	}
-}*/
-
 /* CSS-only click-to-fullscreen images */
 .image-zoom-toggle {
 	display: none;
@@ -1904,7 +1801,6 @@ html {
 	opacity: 1;
 }
 
-
 /* Hide JS navbar elements */
 .no-js .hide-on-noscript {
   display: none !important;
@@ -1913,10 +1809,6 @@ html {
   .no-js .hide-on-noscript-small {
 	display: none !important;
   }
-  
-  /*.no-js nav ul a {
-	padding: 0 12px;
-  }*/
 }
 @media only screen and (min-width: 601px) {
 	.no-js nav .brand-logo.logo-main {
