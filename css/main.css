@@ -610,7 +610,15 @@ nav .brand-logo.logo-main {
 	header.container nav.container {
 		margin: 0;
 	}
-    
+    @media (screen-spanning: single-fold-vertical) {
+        .container {
+            margin-left: calc(env(fold-left) + env(fold-width));
+            max-width: calc(100% - calc(env(fold-left) + env(fold-width)))
+        }
+        .sidenav {
+            width: env(fold-left);
+        }
+    }
 }
 
 /* Make room for navigation rail */
