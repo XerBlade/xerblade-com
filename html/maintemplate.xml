@@ -30,7 +30,7 @@
 	</b:if>
 
 	<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous"/>
-	<link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/1a77ee6805ce6f35924028285d411a7188d3c8da/css/main.min.css" integrity="sha384-sjOD2AgekfU9EOYQckKMZDHAOh08rgwJNhzOWOSiTP7LLePmoEej7lV4Pk/hUFZi" crossorigin="anonymous"/>
+	<link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/ee32ff007cd9a4bea85327007221fb6d7a163b95/css/main.min.css" integrity="sha384-CW/gteNYISBwvNHzOZgdZ/skNS6YKA8WvQ8jtA3bneZjRRPwoSc+xy3XY/g4zeZY" crossorigin="anonymous"/>
 	<link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/6a5fc3134732434d744c90e453ac58ee484bfc00/css/darktheme.min.css" type="text/css"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com"/>
 	<link rel="preconnect" href="https://xerblade.disqus.com"/>
@@ -189,7 +189,7 @@
 	
 
 <link href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css' media='screen,projection' rel='stylesheet' integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous"/>
-<link href='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/1a77ee6805ce6f35924028285d411a7188d3c8da/css/main.min.css' media='all' rel='stylesheet' integrity="sha384-sjOD2AgekfU9EOYQckKMZDHAOh08rgwJNhzOWOSiTP7LLePmoEej7lV4Pk/hUFZi" crossorigin="anonymous"/>
+<link href='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/ee32ff007cd9a4bea85327007221fb6d7a163b95/css/main.min.css' media='all' rel='stylesheet' integrity="sha384-CW/gteNYISBwvNHzOZgdZ/skNS6YKA8WvQ8jtA3bneZjRRPwoSc+xy3XY/g4zeZY" crossorigin="anonymous"/>
 <b:if cond='data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/fateextra-walkthrough-enemy-patterns.html&quot;'>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet" media='screen,projection'/>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather&amp;family=Roboto+Slab&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet" media='print'/>
