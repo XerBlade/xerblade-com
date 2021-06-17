@@ -1364,6 +1364,17 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 		cursor: default;
 		transition: opacity 0.25s cubic-bezier(0, 0, 0.3, 1);
 	}
+    
+    @media (prefers-reduced-motion: reduce) {
+        #slide-out,
+        .nav-wrapper #menu-toggle.active ~ #slide-out,
+        .nav-wrapper #menu-toggle:checked ~ #slide-out,
+        .nav-wrapper .menu-button:after,
+        .nav-wrapper #menu-toggle.active ~ .menu-button:after,
+        .nav-wrapper #menu-toggle:checked ~ .menu-button:after {
+            transition: none;
+        }
+    }
 }
 
 @media (max-height: 374px) {
