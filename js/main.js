@@ -28,22 +28,23 @@ function formatShortDateTime(isod) {
     return dateString + " – " + timeString;
 }
 
-
-const dateTime = document.querySelectorAll(".postDateTimeDisplay")
-dateTime.forEach(elem => {
-    elem.textContent = formatDateTime(elem.getAttribute("content"));
-});
-const timeOnly = document.querySelectorAll(".postTimeOnlyDisplay")
-timeOnly.forEach(elem => {
-    elem.parentNode.removeChild(elem);
-});
-const postDate = document.querySelectorAll(".postDateDisplay")
-postDate.forEach(elem => {
-    elem.textContent = formatDateOnly(elem.getAttribute("content"));
-});
-const shortDateTime = document.querySelectorAll(".postShortDateTimeDisplay")
-shortDateTime.forEach(elem => {
-    elem.textContent = formatShortDateTime(elem.getAttribute("content"));
+document.addEventListener('DOMContentLoaded', () => {
+    const dateTime = document.querySelectorAll(".postDateTimeDisplay")
+    dateTime.forEach(elem => {
+        elem.textContent = formatDateTime(elem.getAttribute("content"));
+    });
+    const timeOnly = document.querySelectorAll(".postTimeOnlyDisplay")
+    timeOnly.forEach(elem => {
+        elem.parentNode.removeChild(elem);
+    });
+    const postDate = document.querySelectorAll(".postDateDisplay")
+    postDate.forEach(elem => {
+        elem.textContent = formatDateOnly(elem.getAttribute("content"));
+    });
+    const shortDateTime = document.querySelectorAll(".postShortDateTimeDisplay")
+    shortDateTime.forEach(elem => {
+        elem.textContent = formatShortDateTime(elem.getAttribute("content"));
+    });
 });
 
 
