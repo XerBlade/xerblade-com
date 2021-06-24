@@ -343,7 +343,7 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 					  <b:else/>
 					  <li id='sidenav-news'><a class='ripple' expr:href='data:blog.canonicalHomepageUrl + &quot;?m=0&quot;'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM3 19V6h8v13H3zm18 0h-8V6h8v13zm-7-9.5h6V11h-6zm0 2.5h6v1.5h-6zm0 2.5h6V16h-6z"/></svg>News</a></li>
 				  </b:if>
-				  <b:if cond='data:blog.pageType == &quot;static_page&quot; and not ( data:blog.canonicalUrl contains &quot;/p/tags.html&quot; or data:blog.canonicalUrl contains &quot;/p/about.html&quot; or data:blog.canonicalUrl contains &quot;/p/currents.html&quot; or data:blog.canonicalUrl contains &quot;/p/favorites.html&quot; or data:blog.canonicalUrl contains &quot;/p/follow.html&quot; or data:blog.canonicalUrl contains &quot;/p/contact.html&quot; or data:blog.canonicalUrl contains &quot;/p/search.html&quot; )'>
+				  <b:if cond='data:blog.pageType == &quot;static_page&quot; and not ( data:blog.canonicalUrl contains &quot;/p/tags.html&quot; or data:blog.canonicalUrl contains &quot;/p/about.html&quot; or data:blog.canonicalUrl contains &quot;/p/currents.html&quot; or data:blog.canonicalUrl contains &quot;/p/favorites.html&quot; or data:blog.canonicalUrl contains &quot;/p/follow.html&quot; or data:blog.canonicalUrl contains &quot;/p/contact.html&quot; or data:blog.canonicalUrl contains &quot;/p/search.html&quot; or data:blog.canonicalUrl contains &quot;/p/privacy.html&quot; )'>
 					  <li id='sidenav-pages' class='active'><a class='ripple' expr:href='data:blog.canonicalHomepageUrl + &quot;p/pages.html?m=0&quot;'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>Guides</a></li>
 					  <b:else/>
 					  <li id='sidenav-pages'><a class='ripple' expr:href='data:blog.canonicalHomepageUrl + &quot;p/pages.html?m=0&quot;'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zM10 9h8v2h-8zm0 3h4v2h-4zm0-6h8v2h-8z"/></svg>Guides</a></li>
@@ -355,7 +355,7 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 				  </b:if>
 				  <li style='padding:0'><div class='divider'/></li>
 				  
-				  <b:if cond='data:blog.canonicalUrl contains &quot;/p/about.html&quot; or data:blog.canonicalUrl contains &quot;/p/currents.html&quot; or data:blog.canonicalUrl contains &quot;/p/favorites.html&quot;'>
+				  <b:if cond='data:blog.canonicalUrl contains &quot;/p/about.html&quot; or data:blog.canonicalUrl contains &quot;/p/currents.html&quot; or data:blog.canonicalUrl contains &quot;/p/favorites.html&quot; or data:blog.canonicalUrl contains &quot;/p/privacy.html&quot;'>
 					  <li id='sidenav-about' class='active'><a class='ripple' expr:href='data:blog.canonicalHomepageUrl + &quot;p/about.html?m=0&quot;'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>About</a></li>
 					  <b:else/>
 					  <li id='sidenav-about'><a class='ripple' expr:href='data:blog.canonicalHomepageUrl + &quot;p/about.html?m=0&quot;'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>About</a></li>
@@ -449,7 +449,7 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 			<div class='rail-item-label'>News</div>
 		  </a>
 	  </b:if>
-	  <b:if cond='data:blog.pageType == &quot;static_page&quot; and not ( data:blog.canonicalUrl contains &quot;/p/tags.html&quot; or data:blog.canonicalUrl contains &quot;/p/about.html&quot; or data:blog.canonicalUrl contains &quot;/p/currents.html&quot; or data:blog.canonicalUrl contains &quot;/p/favorites.html&quot; or data:blog.canonicalUrl contains &quot;/p/follow.html&quot; or data:blog.canonicalUrl contains &quot;/p/contact.html&quot; or data:blog.canonicalUrl contains &quot;/p/search.html&quot; )'>
+	  <b:if cond='data:blog.pageType == &quot;static_page&quot; and not ( data:blog.canonicalUrl contains &quot;/p/tags.html&quot; or data:blog.canonicalUrl contains &quot;/p/about.html&quot; or data:blog.canonicalUrl contains &quot;/p/currents.html&quot; or data:blog.canonicalUrl contains &quot;/p/favorites.html&quot; or data:blog.canonicalUrl contains &quot;/p/follow.html&quot; or data:blog.canonicalUrl contains &quot;/p/contact.html&quot; or data:blog.canonicalUrl contains &quot;/p/search.html&quot; or data:blog.canonicalUrl contains &quot;/p/privacy.html&quot; )'>
 		  <a id='rail-pages' class='rail-item active' expr:href='data:blog.canonicalHomepageUrl + &quot;p/pages.html?m=0&quot;'>
 			<div class='rail-item-icon ripple'><span class='rail-icon-outer'><span class='rail-icon-inner'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zM10 9h8v2h-8zm0 3h4v2h-4zm0-6h8v2h-8z"/></svg></span></span></div>
 			<div class='rail-item-label'>Guides</div>
@@ -472,7 +472,7 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 		  </a>
 	  </b:if>
 	  
-	  <b:if cond='data:blog.canonicalUrl contains &quot;/p/about.html&quot; or data:blog.canonicalUrl contains &quot;/p/currents.html&quot; or data:blog.canonicalUrl contains &quot;/p/favorites.html&quot;'>
+	  <b:if cond='data:blog.canonicalUrl contains &quot;/p/about.html&quot; or data:blog.canonicalUrl contains &quot;/p/currents.html&quot; or data:blog.canonicalUrl contains &quot;/p/favorites.html&quot; or data:blog.canonicalUrl contains &quot;/p/privacy.html&quot;'>
 		  <a id='rail-about' class='rail-item active' expr:href='data:blog.canonicalHomepageUrl + &quot;p/about.html?m=0&quot;'>
 			<div class='rail-item-icon ripple'><span class='rail-icon-outer'><span class='rail-icon-inner'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></span></span></div>
 			<div class='rail-item-label'>About</div>
@@ -1533,6 +1533,41 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 											<a expr:href='data:post.url.canonical + &quot;#disqus_thread&quot;'>Comments</a>
 										</span>
 									</div>
+                                    <b:elseif cond='data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/privacy.html&quot;' />
+									<div class='post-header card-panel hide' id='post-header'>
+										<div class='post-header-line-1'/>
+										<span class='post-author vcard'>
+											<span class='author vcard' itemprop='author' itemscope='' itemtype='https://schema.org/Person'>
+												<meta itemprop='name' content='Rex Cope'/>
+												<span class='fn hide' itemprop='alternateName'>
+													<data:post.author/>
+												</span>
+												<link expr:href='data:blog.canonicalHomepageUrl' itemprop='url'/>
+											</span>
+											<span itemprop='publisher' itemscope='' itemtype='https://schema.org/Organization'>
+												<meta content='XerBlade.com' itemprop='name'/>
+												<span itemprop='logo' itemscope='publisher' itemtype='https://schema.org/ImageObject'>
+													<meta content='https://1.bp.blogspot.com/-ZcYd30P4ORY/W0P0vjFu23I/AAAAAAABrt8/wv0nQVtOnLAvMrwF2TcTJYRO2RkigCZtgCLcBGAs/s1600/publisherlogo.png' itemprop='url'/>
+													<meta content='60' itemprop='height'/>
+													<meta content='600' itemprop='width'/>
+												</span>
+												<span itemprop='image' itemscope='publisher' itemtype='https://schema.org/ImageObject'>
+													<meta content='https://3.bp.blogspot.com/-vy_mAM9r5F4/W0LimfsPFSI/AAAAAAABrps/cO8CVR35nOoZaMFL4MDxTvJmDdzwn7sUQCLcBGAs/s1600/android-icon-192x192.png' itemprop='url'/>
+													<meta content='192' itemprop='height'/>
+													<meta content='192' itemprop='width'/>
+												</span>
+												<link expr:href='data:blog.canonicalHomepageUrl' itemprop='url'/>
+												<link expr:href='data:blog.canonicalHomepageUrl' itemprop='sameAs'/>
+												<link href='https://www.youtube.com/XerBlade' itemprop='sameAs'/>
+												<link href='https://twitter.com/XerBlade' itemprop='sameAs'/>
+												<link href='https://www.facebook.com/XerBlade' itemprop='sameAs'/>
+											</span>
+										</span>
+										<span class='post-comment-link'>
+											<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="16"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM20 4v13.17L18.83 16H4V4h16zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z"/></svg>
+											<a expr:href='data:post.url.canonical + &quot;#disqus_thread&quot;'>Comments</a>
+										</span>
+									</div>
 									<b:else/>
 									<div class='post-header card-panel hide-ads' id='post-header'>
 										<div class='post-header-line-1'/>
@@ -1757,99 +1792,46 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 								<!-- End related posts area -->
 								<!-- Begin recent posts area -->
 								<b:if cond='data:blog.pageType == &quot;static_page&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/pages.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/tags.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/search.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/follow.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/about.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/contact.html&quot;'>
-									
-									<div class='boxframe hide-on-noscript'>
-										<div id='related-posts'>
-											<div class='card-panel center-align'>
-												<div class="preloader-wrapper active" style='display:inline-block'>
-													<div class="spinner-layer spinner-red-only">
-													  <div class="circle-clipper left">
-														<div class="circle"></div>
-													  </div><div class="gap-patch">
-														<div class="circle"></div>
-													  </div><div class="circle-clipper right">
-														<div class="circle"></div>
-													  </div>
-													</div>
-												</div>
-												<div id='comments-loader-label'>Loading recent posts...</div>
-											</div>
-											<!--<ins class="adsbygoogle"
-												style="display:block"
-												data-ad-format="autorelaxed"
-												data-ad-client="ca-pub-3818891363269501"
-												data-ad-slot="2638047452"
-												id="matchedcontent-in-related"></ins>-->
-											<!--<script>
-											//<![CDATA[
-												var matchedins = document.getElementById('matchedcontent-in-related');
-												var darksheet = document.getElementById('darkthemestylesheet');
-												var isdarktheme = ((darksheet.getAttribute('media') == 'screen') || ((darksheet.getAttribute('media') == 'screen and (prefers-color-scheme: dark)') && window.getComputedStyle(document.documentElement).getPropertyValue('content').replace(/"/g, '') == 'dark'));
-												if (isdarktheme) {
-													matchedins.classList.add('show-on-dark-theme-only');
-													matchedins.setAttribute('data-ad-slot', '4142700818');
-												}
-												(adsbygoogle = window.adsbygoogle || []).push({});
-											//]]>
-											</script>-->
-											<!--<script>
-											var matchedins=document.getElementById(&quot;matchedcontent-in-related&quot;),darksheet=document.getElementById(&quot;darkthemestylesheet&quot;),isdarktheme=&quot;screen&quot;==darksheet.getAttribute(&quot;media&quot;)||&quot;screen and (prefers-color-scheme: dark)&quot;==darksheet.getAttribute(&quot;media&quot;)&amp;&amp;&quot;dark&quot;==window.getComputedStyle(document.documentElement).getPropertyValue(&quot;content&quot;).replace(/&quot;/g,&quot;&quot;);isdarktheme&amp;&amp;(matchedins.classList.add(&quot;show-on-dark-theme-only&quot;),matchedins.setAttribute(&quot;data-ad-slot&quot;,&quot;4142700818&quot;)),(adsbygoogle=window.adsbygoogle||[]).push({});
-											</script>-->
-										</div>
-										<div class='clear'/>
-									</div>
+									<b:if cond='data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/privacy.html&quot;'>
+                                        <div class='boxframe hide-on-noscript'>
+                                            <div id='related-posts'>
+                                                <div class='card-panel center-align'>
+                                                    <div class="preloader-wrapper active" style='display:inline-block'>
+                                                        <div class="spinner-layer spinner-red-only">
+                                                          <div class="circle-clipper left">
+                                                            <div class="circle"></div>
+                                                          </div><div class="gap-patch">
+                                                            <div class="circle"></div>
+                                                          </div><div class="circle-clipper right">
+                                                            <div class="circle"></div>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id='comments-loader-label'>Loading recent posts...</div>
+                                                </div>
+                                            </div>
+                                            <div class='clear'/>
+                                        </div>
+                                    </b:if>
 								</b:if>
 								<!-- End recent posts area -->
 								<!-- Begin donation panel -->
 								<b:if cond='data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/pages.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/tags.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/search.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/follow.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/about.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/contact.html&quot;'>
-									<footer class="card yellow lighten-5 hide-ads" id='donation-card'>
-										<section class="card-content black-text">
-											<p>Running a website costs money, and advertising doesn&#8217;t pay like it used to. Consider donating on PayPal or buying me a coffee on Ko-fi. Every little bit helps. If every visitor gave even a dollar, my monthly costs could be covered in under a day.</p>
-										</section>
-										<footer class="card-action">
-											<a href='https://www.paypal.com/cgi-bin/webscr?hosted_button_id=VUC44CJTEFR6L&amp;cmd=_s-xclick'>PayPal</a>
-											<a href='https://ko-fi.com/xerblade'>Ko-fi</a>
-										</footer>
-									</footer>
+                                    <b:if cond='data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/privacy.html&quot;'>
+                                        <footer class="card yellow lighten-5 hide-ads" id='donation-card'>
+                                            <section class="card-content black-text">
+                                                <p>Running a website costs money, and advertising doesn&#8217;t pay like it used to. Consider donating on PayPal or buying me a coffee on Ko-fi. Every little bit helps. If every visitor gave even a dollar, my monthly costs could be covered in under a day.</p>
+                                            </section>
+                                            <footer class="card-action">
+                                                <a href='https://www.paypal.com/cgi-bin/webscr?hosted_button_id=VUC44CJTEFR6L&amp;cmd=_s-xclick'>PayPal</a>
+                                                <a href='https://ko-fi.com/xerblade'>Ko-fi</a>
+                                            </footer>
+                                        </footer>
+                                    </b:if>
 								</b:if>
-								<!--<div class='card-panel' id='donation-card'>
-								  <span>Running a website costs money, and advertising doesn&#8217;t pay like it used to. Consider <a href='https://goo.gl/r2VtEM'>donating on PayPal</a> or <a href='https://ko-fi.com/xerblade'>buying me a coffee on Ko-fi</a>. Every little bit helps. If every visitor gave even a dollar, my monthly costs could be covered in under a day.
-								  </span>
-								</div>-->
-								<!-- End donation panel -->
-								<!-- Begin Play-Asia Affiliate Banner -->
-								<!--<iframe id="id01_728231" allowtransparency="true" src="https://www.play-asia.com/38/190%2C000000%2Cnone%2C0%2C0%2C0%2C0%2Ctrans%2C000000%2Cleft%2C0%2C0-391-765-36detective+conan-708p9i-062-783c-901qtut-33iframe_banner-405-44100" style="border-style: none; border-width: 0px; border-color: #000000; padding: 0; margin: 0; scrolling: no; frameborder: 0;" scrolling="no" frameborder="0" width="100%" height="215"></iframe>
-								<script type="text/javascript">
-								var t = ""; t += window.location; t = t.replace( /#.*$/g, "" ).replace( /^.*:\/*/i, "" ).replace( /\./g, "[dot]" ).replace( /\//g, "[obs]" ).replace( /-/g, "[dash]" ); t = encodeURIComponent( encodeURIComponent( t ) ); var iframe = document.getElementById( "id01_728231" ); iframe.src = iframe.src.replace( "iframe_banner", t );
-								</script>
-								<iframe id="id01_732414" class='hide' allowtransparency="true" src="https://www.play-asia.com/38/190%2C000000%2Cnone%2C0%2C0%2C0%2C0%2Ctrans%2Cffffff%2Cleft%2C0%2C0-391-765-36detective+conan-70f7gg-062-783c-901qtut-33iframe_banner-405-44100" style="border-style: none; border-width: 0px; border-color: #000000; padding: 0; margin: 0; scrolling: no; frameborder: 0;" scrolling="no" frameborder="0" width="100%" height="215"></iframe>
-								<script type="text/javascript">
-								var t = ""; t += window.location; t = t.replace( /#.*$/g, "" ).replace( /^.*:\/*/i, "" ).replace( /\./g, "[dot]" ).replace( /\//g, "[obs]" ).replace( /-/g, "[dash]" ); t = encodeURIComponent( encodeURIComponent( t ) ); var iframe = document.getElementById( "id01_732414" ); iframe.src = iframe.src.replace( "iframe_banner", t );
-								</script>-->
-								<!-- End Play-Asia Affiliate Banner -->
 								<b:if cond='data:blog.pageType == &quot;item&quot; or data:blog.pageType == &quot;static_page&quot;'>
 									<b:include data='post' name='comment_picker'/>
 								</b:if>
-								<!--<b:if cond='data:blog.pageType == &quot;item&quot;'>
-									--><!-- navigation --><!--
-									<b:include name='nextprev'/>
-								</b:if>-->
-								<!--<div class='post-footer'>
-									<div class='post-footer-line post-footer-line-1'>
-										<span class='post-icons'>
-											--><!-- email post links --><!--
-											<b:if cond='data:post.emailPostUrl.https'>
-												<span class='item-action'>
-													<a expr:href='data:post.emailPostUrl.https' expr:title='data:top.emailPostMsg'>
-														<img alt='' class='icon-action' height='13' src='https://img1.blogblog.com/img/icon18_email.gif' width='18'/>
-													</a>
-												</span>
-											</b:if>
-											--><!-- quickedit pencil --><!--
-											<b:include data='post' name='postQuickEdit'/>
-										</span>
-									</div>
-								</div>-->
 							</div>
 						</div>
 					</b:if>
@@ -2377,10 +2359,11 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 				  <div class='col l12 s6 m8'>
 					<h5>Content</h5>
 					<ul>
-						<li class='col l3 s12'><a expr:href='data:blog.canonicalHomepageUrl + &quot;?m=0&quot;'>News</a></li>
-						<li class='col l3 s12'><a expr:href='data:blog.canonicalHomepageUrl + &quot;p/pages.html?m=0&quot;'>Guides</a></li>
-						<li class='col l3 s12'><a expr:href='data:blog.canonicalHomepageUrl + &quot;p/tags.html?m=0&quot;'>Categories</a></li>
-						<li class='col l3 s12'><a expr:href='data:blog.canonicalHomepageUrl + &quot;p/about.html?m=0&quot;'>About</a></li>
+						<li class='col l2 s12'><a expr:href='data:blog.canonicalHomepageUrl + &quot;?m=0&quot;'>News</a></li>
+						<li class='col l2 s12'><a expr:href='data:blog.canonicalHomepageUrl + &quot;p/pages.html?m=0&quot;'>Guides</a></li>
+						<li class='col l2 s12'><a expr:href='data:blog.canonicalHomepageUrl + &quot;p/tags.html?m=0&quot;'>Categories</a></li>
+						<li class='col l2 s12'><a expr:href='data:blog.canonicalHomepageUrl + &quot;p/about.html?m=0&quot;'>About</a></li>
+						<li class='col l3 s12'><a expr:href='data:blog.canonicalHomepageUrl + &quot;p/privacy.html?m=0&quot;'>Privacy Policy</a></li>
 					</ul>
 				  </div>
 				  <div class='col l12 s6 m4'>
@@ -2434,7 +2417,7 @@ var darkThemeSelected=null!==localStorage.getItem(&quot;themeSwitch&quot;)&amp;&
 </script>
 
 
-	<b:if cond='data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/pages.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/tags.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/search.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/follow.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/about.html&quot;'>
+	<b:if cond='data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/pages.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/tags.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/search.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/follow.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/about.html&quot; or data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/privacy.html&quot;'>
 		
 		<style type='text/css'>
 			#comments {display:none;}
