@@ -1,9 +1,11 @@
 'use strict';
 
-var tabs = {};
+const tabs = {};
+
+let hash = '';
 
 function removeHash () { 
-	var scrollV, scrollH, loc = window.location;
+	let scrollV, scrollH, loc = window.location;
 	if ("replaceState" in history)
 		history.replaceState("", document.title, loc.pathname + loc.search);
 	else {
@@ -20,19 +22,16 @@ function removeHash () {
 }
 
 if (window.location.hash) {
-	var hash = window.location.hash;
+	hash = window.location.hash;
 	if (hash) {
 		hash = hash.replace(/#/, "");
-		// console.log("hash: ", hash);
 		removeHash();
 	}
 }
 
 function changePageIndicator(index) {
-	// console.log("page number: ", index);
-	var paginators = document.querySelectorAll(".paginate");
-	Array.prototype.forEach.call(paginators, function(paginator) {
-		// paginator.classList.add("ripple");
+	const paginators = document.querySelectorAll(".paginate");
+	paginators.forEach(paginator => {
 		paginator.classList.remove("disabled");
 		paginator.classList.remove("active");
 		paginator.firstElementChild.removeAttribute('disabled');
@@ -40,133 +39,116 @@ function changePageIndicator(index) {
 	
 	switch (index) {
 	case 1:
-		var page1s = document.querySelectorAll(".page1");
-		var pageprevs = document.querySelectorAll(".pageprev");
-		Array.prototype.forEach.call(page1s, function(page1) {
-			//page1.classList.remove("ripple");
+		const page1s = document.querySelectorAll(".page1");
+		const pageprevs = document.querySelectorAll(".pageprev");
+		page1s.forEach(page1 => {
 			page1.classList.add("active");
 			page1.firstElementChild.setAttribute('disabled', true);
 		});
-		Array.prototype.forEach.call(pageprevs, function(pageprev) {
-			//pageprev.classList.remove("ripple");
+		pageprevs.forEach(pageprev => {
 			pageprev.classList.add("disabled");
 			pageprev.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 2:
-		var page2s = document.querySelectorAll(".page2");
-		Array.prototype.forEach.call(page2s, function(page2) {
-			//page2.classList.remove("ripple");
+		const page2s = document.querySelectorAll(".page2");
+		page2s.forEach(page2 => {
 			page2.classList.add("active");
 			page2.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 3:
-		var page3s = document.querySelectorAll(".page3");
-		Array.prototype.forEach.call(page3s, function(page3) {
-			//page3.classList.remove("ripple");
+		const page3s = document.querySelectorAll(".page3");
+		page3s.forEach(page3 => {
 			page3.classList.add("active");
 			page3.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 4:
-		var page4s = document.querySelectorAll(".page4");
-		Array.prototype.forEach.call(page4s, function(page4) {
-			//page4.classList.remove("ripple");
+		const page4s = document.querySelectorAll(".page4");
+		page4s.forEach(page4 => {
 			page4.classList.add("active");
 			page4.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 5:
-		var page5s = document.querySelectorAll(".page5");
-		Array.prototype.forEach.call(page5s, function(page5) {
-			//page5.classList.remove("ripple");
+		const page5s = document.querySelectorAll(".page5");
+		page5s.forEach(page5 => {
 			page5.classList.add("active");
 			page5.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 6:
-		var page6s = document.querySelectorAll(".page6");
-		Array.prototype.forEach.call(page6s, function(page6) {
-			//page6.classList.remove("ripple");
+		const page6s = document.querySelectorAll(".page6");
+		page6s.forEach(page6 => {
 			page6.classList.add("active");
 			page6.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 7:
-		var page7s = document.querySelectorAll(".page7");
-		Array.prototype.forEach.call(page7s, function(page7) {
-			//page7.classList.remove("ripple");
+		const page7s = document.querySelectorAll(".page7");
+		page7s.forEach(page7 => {
 			page7.classList.add("active");
 			page7.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 8:
-		var page8s = document.querySelectorAll(".page8");
-		Array.prototype.forEach.call(page8s, function(page8) {
-			//page8.classList.remove("ripple");
+		const page8s = document.querySelectorAll(".page8");
+		page8s.forEach(page8 => {
 			page8.classList.add("active");
 			page8.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 9:
-		var page9s = document.querySelectorAll(".page9");
-		Array.prototype.forEach.call(page9s, function(page9) {
-			//page9.classList.remove("ripple");
+		const page9s = document.querySelectorAll(".page9");
+		page9s.forEach(page9 => {
 			page9.classList.add("active");
 			page9.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 10:
-		var page10s = document.querySelectorAll(".page10");
-		Array.prototype.forEach.call(page10s, function(page10) {
-			//page10.classList.remove("ripple");
+		const page10s = document.querySelectorAll(".page10");
+		page10s.forEach(page10 => {
 			page10.classList.add("active");
 			page10.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 11:
-		var page11s = document.querySelectorAll(".page11");
-		Array.prototype.forEach.call(page11s, function(page11) {
-			//page11.classList.remove("ripple");
+		const page11s = document.querySelectorAll(".page11");
+		page11s.forEach(page11 => {
 			page11.classList.add("active");
 			page11.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 12:
-		var page12s = document.querySelectorAll(".page12");
-		Array.prototype.forEach.call(page12s, function(page12) {
-			//page12.classList.remove("ripple");
+		const page12s = document.querySelectorAll(".page12");
+		page12s.forEach(page12 => {
 			page12.classList.add("active");
 			page12.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 13:
-		var page13s = document.querySelectorAll(".page13");
-		Array.prototype.forEach.call(page13s, function(page13) {
-			//page13.classList.remove("ripple");
+		const page13s = document.querySelectorAll(".page13");
+		page13s.forEach(page13 => {
 			page13.classList.add("active");
 			page13.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 14:
-		var page14s = document.querySelectorAll(".page14");
-		Array.prototype.forEach.call(page14s, function(page14) {
-			//page14.classList.remove("ripple");
+		const page14s = document.querySelectorAll(".page14");
+		page14s.forEach(page14 => {
 			page14.classList.add("active");
 			page14.firstElementChild.setAttribute('disabled', true);
 		});
 		break;
 	case 15:
-		var page15s = document.querySelectorAll(".page15");
-		var pagenexts = document.querySelectorAll(".pagenext");
-		Array.prototype.forEach.call(page15s, function(page15) {
-			//page15.classList.remove("ripple");
+		const page15s = document.querySelectorAll(".page15");
+		const pagenexts = document.querySelectorAll(".pagenext");
+		page15s.forEach(page15 => {
 			page15.classList.add("active");
 			page15.firstElementChild.setAttribute('disabled', true);
 		});
-		Array.prototype.forEach.call(pagenexts, function(pagenext) {
-			//pagenext.classList.remove("ripple");
+		pagenexts.forEach(pagenext => {
 			pagenext.classList.add("disabled");
 			pagenext.firstElementChild.setAttribute('disabled', true);
 		});
@@ -175,8 +157,6 @@ function changePageIndicator(index) {
 }
 
 function GoToTab(tabid) {
-	// console.log('index before: ' + tabs.index);
-	
 	if (tabid == 'prev') {
 		tabs.index--;
 		switch (tabs.index) {
@@ -238,18 +218,16 @@ function GoToTab(tabid) {
 	}
 
 	tabs.elem.className = 'card-content tabs-loaded ' + tabid;
-	// $('ul.tabs').tabs('select_tab', tabid);
-	// console.log('index after: ' + tabs.index)
 	
 	changePageIndicator(tabs.index);
 }
 
 function ChangePageAndKeepPosition(callingElement, targetTabID) {
-	var startingElementPosition = callingElement.getBoundingClientRect().top;
+	const startingElementPosition = callingElement.getBoundingClientRect().top;
 	
 	GoToTab(targetTabID);
 	
-	var afterElementPosition = callingElement.getBoundingClientRect().top;
+	const afterElementPosition = callingElement.getBoundingClientRect().top;
 	
     const usingSmoothScroll = getComputedStyle(document.documentElement).scrollBehavior == 'smooth';
     if (usingSmoothScroll) {
@@ -261,136 +239,135 @@ function ChangePageAndKeepPosition(callingElement, targetTabID) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-	/* Initialize pagination */
-	tabs.elem = document.getElementById('tab-contents');
-	var paginators = document.querySelectorAll('.pagination');
-	for (var i = 0, len = paginators.length; i < len; i++) {
-		paginators[i].classList.remove('hide');
-	}
-	tabs.elem.className = 'card-content tabs-loaded tabintro';
-	tabs.index = 1;
-	
-	/* Go to position specified by any hash entered page with */
-	if (hash) {
-		switch(hash){
-			case 'intro':
-			case 'tabintro':
-				GoToTab('tabintro');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'liststats':
-			case 'tabstats':
-				GoToTab('tabstats');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'listfaq':
-			case 'tabfaq':
-				GoToTab('tabfaq');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps1':
-			case 'tab00':
-				GoToTab('tab00');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps100':
-			case 'tab100':
-				GoToTab('tab100');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps200':
-			case 'tab200':
-				GoToTab('tab200');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps300':
-			case 'tab300':
-				GoToTab('tab300');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps400':
-			case 'tab400':
-				GoToTab('tab400');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps500':
-			case 'tab500':
-				GoToTab('tab500');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps600':
-			case 'tab600':
-				GoToTab('tab600');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps700':
-			case 'tab700':
-				GoToTab('tab700');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps800':
-			case 'tab800':
-				GoToTab('tab800');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps900':
-			case 'tab900':
-				GoToTab('tab900');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'eps1000':
-			case 'tab1000':
-				GoToTab('tab1000');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'epsupcoming':
-			case 'tabupcoming':
-				GoToTab('tabupcoming');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'arcconan':
-				GoToTab('tab00');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'archaibara':
-				GoToTab('tab100');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'arcvermouth':
-				GoToTab('tab100');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'arckir':
-				GoToTab('tab400');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'arcbourbonsh':
-				GoToTab('tab500');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'arcbourbonak':
-				GoToTab('tab700');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'arcakaifamily':
-				GoToTab('tab700');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			case 'arcrum':
-				GoToTab('tab700');
-				document.getElementById(hash).scrollIntoView(true);
-				break;
-			default:
-				window.addEventListener('load', function() {
-					if (hash.indexOf("comment-") == 0) {
-						document.getElementById("footer").scrollIntoView(true);
-					}
-					window.location.hash = hash;
-				});
-				break;
-		}
-	}
-	
-});
-//]]>
+
+/* Initialize pagination */
+tabs.elem = document.getElementById('tab-contents');
+var paginators = document.querySelectorAll('.pagination');
+for (var i = 0, len = paginators.length; i < len; i++) {
+    paginators[i].classList.remove('hide');
+}
+tabs.elem.className = 'card-content tabs-loaded tabintro';
+tabs.index = 1;
+
+/* Go to position specified by any hash entered page with */
+if (hash) {
+    switch(hash){
+        case 'intro':
+        case 'tabintro':
+            GoToTab('tabintro');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'liststats':
+        case 'tabstats':
+            GoToTab('tabstats');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'listfaq':
+        case 'tabfaq':
+            GoToTab('tabfaq');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps1':
+        case 'tab00':
+            GoToTab('tab00');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps100':
+        case 'tab100':
+            GoToTab('tab100');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps200':
+        case 'tab200':
+            GoToTab('tab200');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps300':
+        case 'tab300':
+            GoToTab('tab300');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps400':
+        case 'tab400':
+            GoToTab('tab400');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps500':
+        case 'tab500':
+            GoToTab('tab500');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps600':
+        case 'tab600':
+            GoToTab('tab600');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps700':
+        case 'tab700':
+            GoToTab('tab700');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps800':
+        case 'tab800':
+            GoToTab('tab800');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps900':
+        case 'tab900':
+            GoToTab('tab900');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'eps1000':
+        case 'tab1000':
+            GoToTab('tab1000');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'epsupcoming':
+        case 'tabupcoming':
+            GoToTab('tabupcoming');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'arcconan':
+            GoToTab('tab00');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'archaibara':
+            GoToTab('tab100');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'arcvermouth':
+            GoToTab('tab100');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'arckir':
+            GoToTab('tab400');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'arcbourbonsh':
+            GoToTab('tab500');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'arcbourbonak':
+            GoToTab('tab700');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'arcakaifamily':
+            GoToTab('tab700');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        case 'arcrum':
+            GoToTab('tab700');
+            document.getElementById(hash).scrollIntoView(true);
+            break;
+        default:
+            window.addEventListener('load', () => {
+                if (hash.indexOf("comment-") == 0) {
+                    document.getElementById("footer").scrollIntoView(true);
+                }
+                window.location.hash = hash;
+            });
+            break;
+    }
+}
+
+
