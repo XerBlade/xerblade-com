@@ -151,8 +151,8 @@ function loadRelatedPosts(target) {
 
     var related_embed = document.createElement('script');
 
-    related_embed.crossorigin = 'anonymous';
-    //related_embed.integrity = relatedhash;
+    related_embed.setAttribute('crossorigin', 'anonymous');
+    related_embed.setAttribute('integrity', relatedhash);
     related_embed.onload = console.log("Related posts loaded.");
     related_embed.onerror = function() {
         failedToLoadRelatedPosts();
