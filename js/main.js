@@ -106,8 +106,8 @@ if(window.location.href.indexOf("\/p\/") > -1) {
     relatedhash = 'sha384-L+BqG4uutIJAkHsmHpe1JSI+JUCYu++Zqz/ym48MxILipgV/xKIz4OYCaZi61e7Y';
     relatedtitle = 'recent posts';
 } else {
-    relatedsrc = 'https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/269a8b44dad660053a1c7350c0769af76f6636d9/js/relatedposts.min.js';
-    relatedhash = 'sha384-0tBxUs5FsS8Jev/6xNtfe1CjdKWq132t7Gm4HF/gUcfd6fR5z3VadiRateAZCRT7';
+    relatedsrc = 'https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/aa3d47843fc78fa884a73a44d88e2385170138ef/js/relatedposts.min.js';
+    relatedhash = 'sha384-GxCaPRod4sQ4Hj77ZMXjgvx0+QIz09F2P6hXu3fyfmrQV07FcEi8cvToUG2npac6';
     relatedtitle = 'related posts';
 }
 
