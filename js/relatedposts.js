@@ -189,7 +189,7 @@ function printRelatedLabels() {
     elem.appendChild(row);
 }
 
-const jsonscripts = labels.map(label => {
+const jsonscripts = document.labels.map(label => {
     return canonicalHomeURL + "/feeds/posts/default/-/" + label + "?alt=json-in-script&callback=handleRelatedPostFeedResults&max-results=6";
 });
 
