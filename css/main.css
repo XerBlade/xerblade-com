@@ -3610,7 +3610,7 @@ body.main-body {
 
 .share-btn-pfb:hover,
 .share-btn-pfb:focus {
-    background: var(share-facebook-focus-color);
+    background: var(--share-facebook-focus-color);
 }
 
 .share-btn-ptwi {
