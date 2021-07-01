@@ -3139,7 +3139,8 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 .rail-item {
-    color: inherit;
+    color: var(--main-text-color);
+    fill: var(--main-text-color);
     padding: 0;
     align-items: center;
     border-radius: 0 24px 24px 0;
