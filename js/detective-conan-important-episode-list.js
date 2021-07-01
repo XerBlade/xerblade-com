@@ -244,7 +244,7 @@ function ChangePageAndKeepPosition(callingElement, targetTabID) {
 tabs.elem = document.getElementById('tab-contents');
 var paginators = document.querySelectorAll('.pagination');
 for (var i = 0, len = paginators.length; i < len; i++) {
-    paginators[i].classList.remove('hide');
+    paginators[i].classList.remove('invisible');
 }
 tabs.elem.className = 'card-content tabs-loaded tabintro';
 tabs.index = 1;
