@@ -253,15 +253,15 @@ if (navigator.share) {
 // Start custom form validation display
 
 document.querySelectorAll('.validate').forEach(input => {
-    input.addEventListener('invalid', event => {
-        event.preventDefault();
-        this.classList.add('invalid');
+    input.addEventListener('invalid', ev => {
+        ev.preventDefault();
+        input.classList.add('invalid');
         
-        function removeInvalid(event) {
-            this.classList.remove('invalid');
-            this.removeEventListener(removeInvalid);
+        function removeInvalid() {
+            input.classList.remove('invalid');
+            input.removeEventListener('input', removeInvalid);
         }
-        this.addEventListener('input', removeInvalid);
+        input.addEventListener('input', removeInvalid);
     });
 });
 
