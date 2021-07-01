@@ -27,7 +27,7 @@
     <script>(()=>{const e=new URL(window.location),n=new URLSearchParams(e.search);n.append("m","0"),e.search=n.toString(),window.history.replaceState({},"","/"+e.href.substring(e.href.indexOf("/")+1))})();</script>
     </b:if>
 
-    <link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/b835b4160c11e2b77b13d053a845bb6429e24654/css/main.min.css" integrity="sha384-+yVgysvYyFsumEQyDnGXSxOh5HlKIn675VVNG7d61D3eTcOJAUxYMndb+cpNF6mA" crossorigin="anonymous"/>
+    <link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/c18a2c9d7473eb6906b5e0f3f16c07053e10ce02/css/main.min.css" integrity="sha384-k8ebhJC4E+G/pkBO13hNetvC7Ho9zfGE2G4qgaoloSiW/iZKNhI3s7JWj+6hc0Hk" crossorigin="anonymous"/>
     <link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/a6424ab798c7ae664a4e2288093e08efdd81c7ea/css/darktheme.min.css" integrity="sha384-5c5FIW5X4UWLLCKxu/0xsJIkfAvRiy57wHr2ikrnxc9K6Nr+xIWucDtKrOesOvk4" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="preconnect" href="https://xerblade.disqus.com"/>
@@ -168,13 +168,19 @@
 
     
 
-<link href='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/b835b4160c11e2b77b13d053a845bb6429e24654/css/main.min.css' media='all' rel='stylesheet' integrity="sha384-+yVgysvYyFsumEQyDnGXSxOh5HlKIn675VVNG7d61D3eTcOJAUxYMndb+cpNF6mA" crossorigin="anonymous" />
+<link href='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/c18a2c9d7473eb6906b5e0f3f16c07053e10ce02/css/main.min.css' media='all' rel='stylesheet' integrity="sha384-k8ebhJC4E+G/pkBO13hNetvC7Ho9zfGE2G4qgaoloSiW/iZKNhI3s7JWj+6hc0Hk" crossorigin="anonymous" />
 <b:if cond='data:blog.canonicalUrl == data:blog.canonicalHomepageUrl + &quot;p/fateextra-walkthrough-enemy-patterns.html&quot;'>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet" media='screen' />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;family=Roboto+Mono&amp;display=swap" rel="preload" media='screen' as='style' onload='this.onload=null;this.rel="stylesheet"' />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&amp;family=Roboto+Slab&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet" media='print' />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;family=Roboto+Mono&amp;display=swap" rel="stylesheet" media='screen' />
+    </noscript>
 <b:else/>
-    <link id="screen-font" href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;display=swap" rel="stylesheet" media='screen' />
-    <link id="print-font" href="https://fonts.googleapis.com/css2?family=Merriweather&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" media='print' />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;display=swap" rel="preload" media='screen' as='style' onload='this.onload=null;this.rel="stylesheet"' />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" media='print' />
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Roboto&amp;display=swap" rel="stylesheet" media='screen' />
+    </noscript>
 </b:if>
 <!--<script type='text/javascript'>
 //<![CDATA[
