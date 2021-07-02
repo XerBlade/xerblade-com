@@ -219,5 +219,9 @@ function initTheme() {
     }
 }
 
-initTheme();
+if (document.readyState == 'loading') {
+    window.addEventListener('DOMContentLoaded', initTheme);
+} else {
+    initTheme();
+}
 
