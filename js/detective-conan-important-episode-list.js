@@ -5,13 +5,13 @@ const tabs = {};
 let hash = '';
 
 function removeHash () { 
-	let scrollV, scrollH, loc = window.location;
+	const loc = window.location;
 	if ("replaceState" in history)
 		history.replaceState("", document.title, loc.pathname + loc.search);
 	else {
 		// Prevent scrolling by storing the page's current scroll offset
-		scrollV = document.body.scrollTop;
-		scrollH = document.body.scrollLeft;
+		let scrollV = document.body.scrollTop;
+		let scrollH = document.body.scrollLeft;
 
 		loc.hash = "";
 
@@ -25,7 +25,9 @@ if (window.location.hash) {
 	hash = window.location.hash;
 	if (hash) {
 		hash = hash.replace(/#/, "");
-		removeHash();
+        if (hash.indexOf("comment-") != 0) {
+            removeHash();
+        }
 	}
 }
 
@@ -241,133 +243,132 @@ function ChangePageAndKeepPosition(callingElement, targetTabID) {
 
 
 /* Initialize pagination */
-tabs.elem = document.getElementById('tab-contents');
-var paginators = document.querySelectorAll('.pagination');
-for (var i = 0, len = paginators.length; i < len; i++) {
-    paginators[i].classList.remove('invisible');
-}
-tabs.elem.className = 'card-content tabs-loaded tabintro';
-tabs.index = 1;
+function init() {
+    tabs.elem = document.getElementById('tab-contents');
+    const paginators = document.querySelectorAll('.pagination');
+    for (let i = 0, len = paginators.length; i < len; i++) {
+        paginators[i].classList.remove('invisible');
+    }
+    tabs.elem.className = 'card-content tabs-loaded tabintro';
+    tabs.index = 1;
 
-/* Go to position specified by any hash entered page with */
-if (hash) {
-    switch(hash){
-        case 'intro':
-        case 'tabintro':
-            GoToTab('tabintro');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'liststats':
-        case 'tabstats':
-            GoToTab('tabstats');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'listfaq':
-        case 'tabfaq':
-            GoToTab('tabfaq');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps1':
-        case 'tab00':
-            GoToTab('tab00');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps100':
-        case 'tab100':
-            GoToTab('tab100');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps200':
-        case 'tab200':
-            GoToTab('tab200');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps300':
-        case 'tab300':
-            GoToTab('tab300');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps400':
-        case 'tab400':
-            GoToTab('tab400');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps500':
-        case 'tab500':
-            GoToTab('tab500');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps600':
-        case 'tab600':
-            GoToTab('tab600');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps700':
-        case 'tab700':
-            GoToTab('tab700');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps800':
-        case 'tab800':
-            GoToTab('tab800');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps900':
-        case 'tab900':
-            GoToTab('tab900');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'eps1000':
-        case 'tab1000':
-            GoToTab('tab1000');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'epsupcoming':
-        case 'tabupcoming':
-            GoToTab('tabupcoming');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'arcconan':
-            GoToTab('tab00');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'archaibara':
-            GoToTab('tab100');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'arcvermouth':
-            GoToTab('tab100');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'arckir':
-            GoToTab('tab400');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'arcbourbonsh':
-            GoToTab('tab500');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'arcbourbonak':
-            GoToTab('tab700');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'arcakaifamily':
-            GoToTab('tab700');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        case 'arcrum':
-            GoToTab('tab700');
-            document.getElementById(hash).scrollIntoView(true);
-            break;
-        default:
-            window.addEventListener('load', () => {
-                if (hash.indexOf("comment-") == 0) {
-                    document.getElementById("footer").scrollIntoView(true);
-                }
-                window.location.hash = hash;
-            });
-            break;
+    /* Go to position specified by any hash entered page with */
+    if (hash) {
+        switch(hash){
+            case 'intro':
+            case 'tabintro':
+                GoToTab('tabintro');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'liststats':
+            case 'tabstats':
+                GoToTab('tabstats');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'listfaq':
+            case 'tabfaq':
+                GoToTab('tabfaq');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps1':
+            case 'tab00':
+                GoToTab('tab00');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps100':
+            case 'tab100':
+                GoToTab('tab100');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps200':
+            case 'tab200':
+                GoToTab('tab200');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps300':
+            case 'tab300':
+                GoToTab('tab300');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps400':
+            case 'tab400':
+                GoToTab('tab400');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps500':
+            case 'tab500':
+                GoToTab('tab500');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps600':
+            case 'tab600':
+                GoToTab('tab600');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps700':
+            case 'tab700':
+                GoToTab('tab700');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps800':
+            case 'tab800':
+                GoToTab('tab800');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps900':
+            case 'tab900':
+                GoToTab('tab900');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps1000':
+            case 'tab1000':
+                GoToTab('tab1000');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'epsupcoming':
+            case 'tabupcoming':
+                GoToTab('tabupcoming');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'arcconan':
+                GoToTab('tab00');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'archaibara':
+                GoToTab('tab100');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'arcvermouth':
+                GoToTab('tab100');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'arckir':
+                GoToTab('tab400');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'arcbourbonsh':
+                GoToTab('tab500');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'arcbourbonak':
+                GoToTab('tab700');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'arcakaifamily':
+                GoToTab('tab700');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'arcrum':
+                GoToTab('tab700');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+        }
     }
 }
 
 
+if (document.readyState == 'loading') {
+    window.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
