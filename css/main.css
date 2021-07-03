@@ -3009,8 +3009,8 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 			z-index: 998;
 		}
 		
-		.main-container {
-			margin-bottom: 84px;
+		.page-footer {
+			margin-bottom: 28px;
 		}
 	}
 
