@@ -109,12 +109,12 @@ function initDisqusRelatedLazyload() {
     // Which "related posts" should we be using?
     let relatedsrc, relatedhash, relatedtitle;
     if(window.location.href.indexOf("\/p\/") > -1) {
-        relatedsrc = 'https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/269a8b44dad660053a1c7350c0769af76f6636d9/js/recentposts.min.js';
-        relatedhash = 'sha384-L+BqG4uutIJAkHsmHpe1JSI+JUCYu++Zqz/ym48MxILipgV/xKIz4OYCaZi61e7Y';
+        relatedsrc = 'https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/2ec133515ec78e8ab1de8f343f9b44ce07b1f30b/js/recentposts.min.js';
+        relatedhash = 'sha384-xswaAyjukYzl4OeDKwGA/9BkHOxa0WygwYSZcF/KwWisbu3rEnN74PWhOsYY/mBy';
         relatedtitle = 'recent posts';
     } else {
-        relatedsrc = 'https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/aa3d47843fc78fa884a73a44d88e2385170138ef/js/relatedposts.min.js';
-        relatedhash = 'sha384-GxCaPRod4sQ4Hj77ZMXjgvx0+QIz09F2P6hXu3fyfmrQV07FcEi8cvToUG2npac6';
+        relatedsrc = 'https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/2ec133515ec78e8ab1de8f343f9b44ce07b1f30b/js/relatedposts.min.js';
+        relatedhash = 'sha384-fGVhh+QWfZcxf3vwUfS2StWGw910JobU9ZRGK7Usf62ak4MG09TTIBB/VTKWIMPi';
         relatedtitle = 'related posts';
     }
 
