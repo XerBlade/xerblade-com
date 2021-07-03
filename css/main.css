@@ -3572,15 +3572,6 @@ body.main-body {
     text-align: center;
 }
 
-/* Set size of image container to fit the image even before loading for the sake of lazy loading */
-#related-posts .card .card-image {
-	padding-top: 56.25%;
-}
-
-#related-posts .card .card-image img {
-	position: absolute;
-}
-
 .imgpost {
 	padding: 12px !important;
 	text-overflow: ellipsis;
