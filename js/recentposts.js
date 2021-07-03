@@ -203,41 +203,37 @@ function printRelatedLabels() {
 }
 
 function addStaticPages() {
-    const container = {feed: {entry: new Array}};
-    
     // Fate/stay night walkthrough
     const entry = {};
-    entry.title = {$t: "Fate\/stay night Walkthrough"};
-    entry.media$thumbnail = {url: "https:\/\/4.bp.blogspot.com\/-cEYayuesa_o\/W2uZj62yRwI\/AAAAAAABtSU\/oSpzioyhJMgbyVqr-Y4FqDTM__8P-MphgCLcBGAs\/s72-c\/FSN%2BTitle%2B2.jpg"};
-    entry.content = {$t : ""};
-    entry.link = [{rel: "alternate", href: "https:\/\/www.xerblade.com\/p\/fate-stay-night-walkthrough.html"}];
-    container.feed.entry.push(entry);
+    entry.title = "Fate\/stay night Walkthrough";
+    entry.fullTitle = "Fate\/stay night Walkthrough";
+    entry.thumbnail = "https:\/\/4.bp.blogspot.com\/-cEYayuesa_o\/W2uZj62yRwI\/AAAAAAABtSU\/oSpzioyhJMgbyVqr-Y4FqDTM__8P-MphgCLcBGAs\/w576-h324-p-k-no-nu\/FSN%2BTitle%2B2.jpg"
+    entry.url = "https:\/\/www.xerblade.com\/p\/fate-stay-night-walkthrough.html";
+    relatedPosts.push(entry);
     
     // Tsukihime walkthrough
     const entry2 = {};
-    entry2.title = {$t: "Tsukihime Walkthrough"};
-    entry2.media$thumbnail = {url: "https:\/\/1.bp.blogspot.com\/-gYp9QT9Nu-I\/W0eacPHXnCI\/AAAAAAABr5o\/jTcKc0eyLMggZUrg6hQzF_OzSy6kshQFQCLcBGAs\/s72-c\/TsukihimeArc.png"};
-    entry2.content = {$t : ""};
-    entry2.link = [{rel: "alternate", href: "https:\/\/www.xerblade.com\/p\/tsukihime-walkthrough.html"}];
-    container.feed.entry.push(entry2);
+    entry2.title = "Tsukihime Walkthrough";
+    entry2.fullTitle = "Tsukihime Walkthrough";
+    entry2.thumbnail = "https:\/\/1.bp.blogspot.com\/-gYp9QT9Nu-I\/W0eacPHXnCI\/AAAAAAABr5o\/jTcKc0eyLMggZUrg6hQzF_OzSy6kshQFQCLcBGAs\/w576-h324-p-k-no-nu\/TsukihimeArc.png"
+    entry2.url = "https:\/\/www.xerblade.com\/p\/tsukihime-walkthrough.html";
+    relatedPosts.push(entry2);
     
     // Fate/Extra walkthrough
     const entry3 = {};
-    entry3.title = {$t: "Fate\/Extra Walkthrough"};
-    entry3.media$thumbnail = {url: "https:\/\/1.bp.blogspot.com\/-Z_GGztl3TUs\/YMB1tzLLFkI\/AAAAAAAB9kc\/dx5AtRTAU0EfUIy9IPNJkfDs6g7RVND1wCLcBGAsYHQ\/s72-c\/Fate%2BExtra%2BMain%2BHeader.jpg"};
-    entry3.content = {$t : ""};
-    entry3.link = [{rel: "alternate", href: "https:\/\/www.xerblade.com\/p\/fateextra-walkthrough.html"}];
-    container.feed.entry.push(entry3);
+    entry3.title = "Fate\/Extra Walkthrough";
+    entry3.fullTitle = "Tsukihime Walkthrough";
+    entry3.thumbnail = "https:\/\/1.bp.blogspot.com\/-Z_GGztl3TUs\/YMB1tzLLFkI\/AAAAAAAB9kc\/dx5AtRTAU0EfUIy9IPNJkfDs6g7RVND1wCLcBGAsYHQ\/w576-h324-p-k-no-nu\/Fate%2BExtra%2BMain%2BHeader.jpg"
+    entry3.url = "https:\/\/www.xerblade.com\/p\/fateextra-walkthrough.html";
+    relatedPosts.push(entry3);
     
     // Detective Conan Important Episode List
     const entry4 = {};
-    entry4.title = {$t: "Detective Conan Important Episode List"};
-    entry4.media$thumbnail = {url: "https:\/\/4.bp.blogspot.com\/-LaB_k5Nwljk\/W0f9xYvWc5I\/AAAAAAABr90\/-nmhOoFQ7o8p6m7GP5KUNs_e6n5JZA2fwCLcBGAs\/s72-c\/ConanBanner%2B%25283%2529.jpg"};
-    entry4.content = {$t : ""};
-    entry4.link = [{rel: "alternate", href: "https:\/\/www.xerblade.com\/p\/detective-conan-important-episode-list.html"}];
-    container.feed.entry.push(entry4);
-    
-    handleRelatedPostFeedResults(container);
+    entry4.title = "Detective Conan Important Episode...";
+    entry4.fullTitle = "Detective Conan Important Episode List";
+    entry4.thumbnail = "https:\/\/4.bp.blogspot.com\/-LaB_k5Nwljk\/W0f9xYvWc5I\/AAAAAAABr90\/-nmhOoFQ7o8p6m7GP5KUNs_e6n5JZA2fwCLcBGAs\/w576-h324-p-k-no-nu\/ConanBanner%2B%25283%2529.jpg"
+    entry4.url = "https:\/\/www.xerblade.com\/p\/detective-conan-important-episode-list.html";
+    relatedPosts.push(entry4);
 }
 
 const currentURL = canonicalHomeURL + location.pathname;
