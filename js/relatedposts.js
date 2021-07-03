@@ -129,6 +129,15 @@ function printRelatedLabels() {
         
         const picture = document.createElement('picture');
         
+        const reducedDataWebpSource = document.createElement('source');
+        reducedDataWebpSource.srcset = relatedPosts[i].thumbnail.replace("/w576-h324-p-k-no-nu/", "/w149-h84-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp");
+        reducedDataWebpSource.media = '(prefers-reduced-data: reduce)';
+        reducedDataWebpSource.type = "image/webp";
+        
+        const reducedDataFallbackSource = document.createElement('source');
+        reducedDataFallbackSource.srcset = relatedPosts[i].thumbnail.replace("/w576-h324-p-k-no-nu/", "/w149-h84-p-k-no-nu/");
+        reducedDataFallbackSource.media = '(prefers-reduced-data: reduce)';
+        
         const webpSource = document.createElement('source');
         webpSource.srcset = 
             relatedPosts[i].thumbnail.replace("/w576-h324-p-k-no-nu/", "/w149-h84-p-k-no-nu-rw/").replace(".jpg", ".webp").replace(".png", ".webp") + ' 149w, ' +
@@ -165,7 +174,11 @@ function printRelatedLabels() {
         const baseImg = document.createElement('img');
         baseImg.src = relatedPosts[i].thumbnail;
         baseImg.alt = '';
+        baseImg.width = '1280';
+        baseImg.height = '720';
         
+        picture.appendChild(reducedDataWebpSource);
+        picture.appendChild(reducedDataFallbackSource);
         picture.appendChild(webpSource);
         picture.appendChild(fallbackSource);
         picture.appendChild(baseImg);
