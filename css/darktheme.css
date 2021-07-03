@@ -168,11 +168,11 @@ img:hover, img.lazyloaded:hover, .adsbygoogle:not(.show-on-dark-theme-only):hove
 }
 
 /* For very special cases */
-.tabs-loaded .show-on-light-theme-only {
+.show-on-light-theme-only {
 	display: none !important;
 }
 
-.tabs-loaded .show-on-dark-theme-only {
+.show-on-dark-theme-only {
 	display: block !important;
 }
 

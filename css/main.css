@@ -3836,11 +3836,11 @@ body {
 }
 
 /* For very special cases */
-.tabs-loaded .show-on-light-theme-only {
-	display: block;
+.show-on-light-theme-only {
+	display: block !important;
 }
 
-.tabs-loaded .show-on-dark-theme-only {
+.show-on-dark-theme-only {
 	display: none !important;
 }
 

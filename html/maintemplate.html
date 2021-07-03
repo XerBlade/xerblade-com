@@ -46,16 +46,26 @@
         </noscript>
     </b:if>
     
-    <script async='async' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
+    <!--<script async='async' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>-->
     <!--<script>
         //<![CDATA[
+        // Lazyloading AdSense
+        function loadAdsense() {
+            window.removeEventListener('scroll', loadAdsense);
+            const script = document.createElement('script');
+            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+            document.head.appendChild(script);
+        }
+        window.addEventListener('scroll', loadAdsense);
+        
+        // Standard AdSense code
         (adsbygoogle = window.adsbygoogle || []).push({
               google_ad_client: "ca-pub-3818891363269501",
               enable_page_level_ads: true
          });
          //]]>
     </script>-->
-    <script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-3818891363269501",enable_page_level_ads:!0});</script>
+    <script>function loadAdsense(){window.removeEventListener("scroll",loadAdsense);const e=document.createElement("script");e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",document.head.appendChild(e)}window.addEventListener("scroll",loadAdsense),(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-3818891363269501",enable_page_level_ads:!0});</script>
     
     <!-- Noscript detection for CSS -->
     <script>document.documentElement.classList.remove('no-js');</script>
