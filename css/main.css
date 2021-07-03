@@ -1849,12 +1849,12 @@ nav ul a:hover, nav ul a:focus {
     }
 }
 
-#main-scrollarea {
+.main-container {
 	margin-top: 64px;
 }
 
 @media (max-width: 600px), (max-width: 992px) and (min-width: 601px) and (max-height: 519px) {
-	#main-scrollarea {
+	.main-container {
 		margin-top: 0;
 		margin-bottom: 56px;
 	}
@@ -3009,7 +3009,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 			z-index: 998;
 		}
 		
-		#main-scrollarea {
+		.main-container {
 			margin-bottom: 84px;
 		}
 	}
@@ -3680,7 +3680,7 @@ div.clear {
 		max-width: 100%;
 		height: auto;
 	}
-    .main-body, #main-scrollarea, .post-single-outer, .blog-posts, .post-header, .card, .card .card-content {
+    .main-body, .main-container, .post-single-outer, .blog-posts, .post-header, .card, .card .card-content {
         padding: 0;
         margin: 0;
         box-shadow: none;
