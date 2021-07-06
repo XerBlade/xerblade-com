@@ -50,22 +50,36 @@
     <!--<script>
         //<![CDATA[
         // Lazyloading AdSense
-        function loadAdsense() {
-            window.removeEventListener('scroll', loadAdsense);
-            const script = document.createElement('script');
-            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-            document.head.appendChild(script);
-        }
-        window.addEventListener('scroll', loadAdsense);
+        (() => {
+            let adsenseLoaded = false;
+            let timeoutID = false;
+            function loadAdsense() {
+                window.removeEventListener('scroll', loadAdsense);
+                adsenseLoaded = true;
+                if (timeoutID) {
+                    clearTimeout(timeoutID);
+                }
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+                document.head.appendChild(script);
+            }
+            window.addEventListener('scroll', loadAdsense);
+            window.addEventListener('load', () => {
+                if (!adsenseLoaded) {
+                    timeoutID = setTimeout(loadAdsense, 3000);
+                }
+            });
+        })();
         
         // Standard AdSense code
         (adsbygoogle = window.adsbygoogle || []).push({
               google_ad_client: "ca-pub-3818891363269501",
               enable_page_level_ads: true
-         });
+        });
          //]]>
     </script>-->
-    <script>function loadAdsense(){window.removeEventListener("scroll",loadAdsense);const e=document.createElement("script");e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",document.head.appendChild(e)}window.addEventListener("scroll",loadAdsense),(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-3818891363269501",enable_page_level_ads:!0});</script>
+    <script>(()=>{let e=!1,o=!1;function d(){window.removeEventListener("scroll",d),e=!0,o&amp;&amp;clearTimeout(o);const n=document.createElement("script");n.async=!0,n.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",document.head.appendChild(n)}window.addEventListener("scroll",d),window.addEventListener("load",()=>{e||(o=setTimeout(d,3e3))})})(),(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-3818891363269501",enable_page_level_ads:!0});</script>
     
     <!-- Noscript detection for CSS -->
     <script>document.documentElement.classList.remove('no-js');</script>
