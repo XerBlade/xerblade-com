@@ -109,8 +109,8 @@ function initDisqusRelatedLazyload() {
     // Which "related posts" should we be using?
     let relatedsrc, relatedhash, relatedtitle;
     if(window.location.href.indexOf("\/p\/") > -1) {
-        relatedsrc = 'https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/2ec133515ec78e8ab1de8f343f9b44ce07b1f30b/js/recentposts.min.js';
-        relatedhash = 'sha384-xswaAyjukYzl4OeDKwGA/9BkHOxa0WygwYSZcF/KwWisbu3rEnN74PWhOsYY/mBy';
+        relatedsrc = 'https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/c2d268800615cdf3485783f44c404dccdc4be832/js/recentposts.min.js';
+        relatedhash = 'sha384-adMTks7SxQUW+nXSUmJnvVOVzIbGsVezPwnAF8GtvHMO2784BUp+tmNHj7XqC6x0';
         relatedtitle = 'recent posts';
     } else {
         relatedsrc = 'https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/2ec133515ec78e8ab1de8f343f9b44ce07b1f30b/js/relatedposts.min.js';
