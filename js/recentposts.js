@@ -222,7 +222,7 @@ function addStaticPages() {
     // Fate/Extra walkthrough
     const entry3 = {};
     entry3.title = "Fate\/Extra Walkthrough";
-    entry3.fullTitle = "Tsukihime Walkthrough";
+    entry3.fullTitle = "Fate\/Extra Walkthrough";
     entry3.thumbnail = "https:\/\/1.bp.blogspot.com\/-Z_GGztl3TUs\/YMB1tzLLFkI\/AAAAAAAB9kc\/dx5AtRTAU0EfUIy9IPNJkfDs6g7RVND1wCLcBGAsYHQ\/w576-h324-p-k-no-nu\/Fate%2BExtra%2BMain%2BHeader.jpg"
     entry3.url = "https:\/\/www.xerblade.com\/p\/fateextra-walkthrough.html";
     relatedPosts.push(entry3);
