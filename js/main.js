@@ -289,7 +289,7 @@ function initModals() {
     modalTriggers.forEach(trigger => {
         const target = trigger.dataset.target;
         const modal = document.getElementById(target);
-        trigger.onclick = (e) => {
+        trigger.onclick = () => {
             modal.classList.add('open');
             modal.querySelector('input[required]').focus();
             const overlay = document.querySelector('.modal-overlay');
@@ -297,7 +297,14 @@ function initModals() {
                 modal.classList.remove('open');
             }
         };
+        trigger.onkeydown = (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                trigger.click();
+            }
+        }
         trigger.href = 'javascript:void(0)';
+        trigger.role = 'button';
         modal.querySelector('form').addEventListener('submit', () => {
             modal.classList.remove('open');
         });

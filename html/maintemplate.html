@@ -277,7 +277,7 @@
             </p>
         </div>
         <div class="modal-footer">
-            <a href="javascript:void(0)" class="modal-close ripple btn-flat">Cancel</a>
+            <button class="modal-close ripple btn-flat">Cancel</button>
             <button type="submit" form="searchtext-modal" value="Submit" class="red ripple ripple-light btn">Search</button>
         </div>
     </div>
@@ -295,7 +295,7 @@
             </form>
         </div>
         <div class="modal-footer">
-            <a href="javascript:void(0)" class="modal-close ripple btn-flat">Cancel</a>
+            <button class="modal-close ripple btn-flat">Cancel</button>
             <button type="submit" form="email-subscribe-form-modal" value="Submit" class="red ripple ripple-light btn">Submit</button>
         </div>
     </div>
@@ -314,7 +314,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <a href="javascript:void(0)" class="modal-close ripple btn-flat">Cancel</a>
+                <button class="modal-close ripple btn-flat">Cancel</button>
                 <button type="submit" form="dcel-email-subscribe-form-modal" value="Submit" class="red ripple ripple-light btn">Submit</button>
             </div>
         </div>
@@ -332,7 +332,7 @@
                 <label for="menu-toggle" class="menu-button nav-svg" id="sidenav-trigger">  
                   <ul>
                       <li>
-                        <a class="ripple ripple-light" aria-label='Open Navigation Menu'>
+                        <a class="ripple ripple-light" aria-label='Open Navigation Menu' role="button">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
                         </a>
                       </li>
@@ -380,15 +380,15 @@
             <ul class='right' id='search-only-nav-action'>
               
               <li id='theme-button-container' class='reveal-labelled'>
-                <a class='nav-svg ripple ripple-light' href='javascript:void(0)' id='theme-button-auto' aria-label='Toggle Light and Dark Themes (Automatic Matching to System Theme Enabled)'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10.85 12.65h2.3L12 9l-1.15 3.65zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM14.3 16l-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9z"/></svg></a>
+                <button class='btn-nav nav-svg ripple ripple-light' id='theme-button-auto' aria-label='Toggle Light and Dark Themes (Automatic Matching to System Theme Enabled)'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M10.85 12.65h2.3L12 9l-1.15 3.65zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM14.3 16l-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9z"/></svg></button>
                 <div class="reveal-label reveal-label-down" id='theme-label-auto'>System Default Theme</div>
-                <a class='nav-svg ripple ripple-light' href='javascript:void(0)' id='theme-button-dark' aria-label='Toggle Light and Dark Themes (Dark Theme Enabled)'><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" style='margin:0 1px'><path d="M280.485281,201.514719 L284,198 L287.514719,201.514719 L292.485281,201.514719 L292.485281,206.485281 L296,210 L292.485281,213.514719 L292.485281,218.485281 L287.514719,218.485281 L284,222 L280.485281,218.485281 L275.514719,218.485281 L275.514719,213.514719 L272,210 L275.514719,206.485281 L275.514719,201.514719 L280.485281,201.514719 Z M283.726536,215.86375 C287.116026,215.86375 289.86375,213.251451 289.86375,210.029016 C289.86375,206.806581 287.116026,204.194281 283.726536,204.194281 C283.073662,204.194281 282.164855,204.396254 281.000116,204.800201 C282.532112,206.378393 283.29811,208.121331 283.29811,210.029016 C283.29811,211.9367 282.444938,213.635948 280.738594,215.126758 C282.007413,215.618086 283.003393,215.86375 283.726536,215.86375 Z" transform="translate(-272, -198)"></path></svg></a>
+                <button class='btn-nav nav-svg ripple ripple-light' id='theme-button-dark' aria-label='Toggle Light and Dark Themes (Dark Theme Enabled)'><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" style='margin:0 1px'><path d="M280.485281,201.514719 L284,198 L287.514719,201.514719 L292.485281,201.514719 L292.485281,206.485281 L296,210 L292.485281,213.514719 L292.485281,218.485281 L287.514719,218.485281 L284,222 L280.485281,218.485281 L275.514719,218.485281 L275.514719,213.514719 L272,210 L275.514719,206.485281 L275.514719,201.514719 L280.485281,201.514719 Z M283.726536,215.86375 C287.116026,215.86375 289.86375,213.251451 289.86375,210.029016 C289.86375,206.806581 287.116026,204.194281 283.726536,204.194281 C283.073662,204.194281 282.164855,204.396254 281.000116,204.800201 C282.532112,206.378393 283.29811,208.121331 283.29811,210.029016 C283.29811,211.9367 282.444938,213.635948 280.738594,215.126758 C282.007413,215.618086 283.003393,215.86375 283.726536,215.86375 Z" transform="translate(-272, -198)"></path></svg></button>
                 <div class="reveal-label reveal-label-down" id='theme-label-dark'>Dark Theme</div>
-                <a class='nav-svg ripple ripple-light' href='javascript:void(0)' id='theme-button-light' aria-label='Toggle Light and Dark Themes (Light Theme Enabled)'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/></svg></a>
+                <button class='btn-nav nav-svg ripple ripple-light' id='theme-button-light' aria-label='Toggle Light and Dark Themes (Light Theme Enabled)'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/></svg></button>
                 <div class="reveal-label reveal-label-down" id='theme-label-light'>Light Theme</div>
               </li>
               
-              <li class='reveal-labelled'><a class='nav-svg ripple ripple-light hide' href='javascript:void(0)' id='native-share-button' aria-label='Share this page'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg></a><div class="reveal-label reveal-label-down">Share</div></li>
+              <li class='reveal-labelled'><button class='btn-nav nav-svg ripple ripple-light hide' href='javascript:void(0)' id='native-share-button' aria-label='Share this page'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg></button><div class="reveal-label reveal-label-down">Share</div></li>
               
               <li class='reveal-labelled'><a class='nav-svg ripple ripple-light modal-trigger' data-target='searchbar-modal' expr:href='data:blog.canonicalHomepageUrl + &quot;p/search.html&quot;' id='search-modal-button' aria-label='Search this website'><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></a><div class="reveal-label reveal-label-down">Search</div></li>
               

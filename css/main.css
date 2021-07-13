@@ -1819,7 +1819,7 @@ nav ul li {
     padding: 0;
 }
 
-nav ul a {
+nav ul a, nav ul button, nav ul .btn-nav {
     transition: background-color .3s;
     font-size: 1rem;
     color: var(--saturated-text-color);
@@ -1828,7 +1828,7 @@ nav ul a {
     cursor: pointer;
 }
 
-nav ul a:hover, nav ul a:focus {
+nav ul a:hover, nav ul a:focus, nav ul button:hover, nav ul button:focus {
     background-color: var(--nav-focus-background-color);
 }
 
@@ -2100,7 +2100,7 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 /* End tooltips */
 
 /* Begin buttons */
-.btn, .btn-large, .btn-small, .btn-flat {
+.btn, .btn-large, .btn-small, .btn-flat, .btn-nav {
     border: none;
     border-radius: 2px;
     display: inline-block;
@@ -2123,9 +2123,35 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
     cursor: pointer;
 }
 
+.btn-nav {
+    height: 56px;
+    line-height: initial;
+}
+
+@media only screen and (min-width: 601px) {
+    .btn-nav {
+        height: 64px;
+    }
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: var(--saturated-text-color);
+    fill: var(--saturated-text-color);
+    background-color: transparent;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+}
+
 .btn:hover, .btn-large:hover, .btn-small:hover,
 .btn:focus, .btn-large:focus, .btn-small:focus {
     background-color: var(--button-background-focus-color);
+}
+
+.btn-nav:hover, .btn-nav:focus {
+    background-color: var(--nav-focus-background-color);
 }
 
 .btn.disabled, .disabled.btn-large, .disabled.btn-small,
@@ -2140,17 +2166,20 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 .btn-large:disabled,
 .btn-small:disabled,
 .btn-flat:disabled,
+.btn-nav:disabled,
 .btn[disabled],
 .btn-large[disabled],
 .btn-small[disabled],
 .btn-floating[disabled],
 .btn-large[disabled],
 .btn-small[disabled],
-.btn-flat[disabled] {
+.btn-flat[disabled],
+.btn-nav[disabled] {
     pointer-events: none;
     background-color: var(--button-disabled-color);
     box-shadow: none;
     color: var(--button-disabled-text-color);
+    fill: var(--button-disabled-text-color);
     cursor: default;
 }
 
@@ -2166,6 +2195,7 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 .btn-large:disabled:hover,
 .btn-small:disabled:hover,
 .btn-flat:disabled:hover,
+.btn-nav:disabled:hover.
 .btn[disabled]:hover,
 .btn-large[disabled]:hover,
 .btn-small[disabled]:hover,
@@ -2173,6 +2203,7 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 .btn-large[disabled]:hover,
 .btn-small[disabled]:hover,
 .btn-flat[disabled]:hover,
+.btn-nav[disabled]:hover,
 .btn.disabled:focus, .disabled.btn-large:focus, .disabled.btn-small:focus,
 .btn-floating.disabled:focus,
 .btn-large.disabled:focus,
@@ -2185,18 +2216,21 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 .btn-large:disabled:focus,
 .btn-small:disabled:focus,
 .btn-flat:disabled:focus,
+.btn-nav:disabled:focus,
 .btn[disabled]:focus,
 .btn-large[disabled]:focus,
 .btn-small[disabled]:focus,
 .btn-floating[disabled]:focus,
 .btn-large[disabled]:focus,
 .btn-small[disabled]:focus,
-.btn-flat[disabled]:focus {
+.btn-flat[disabled]:focus,
+.btn-nav[disabled]:focus {
     background-color: var(--button-disabled-color);
     color: var(--button-disabled-text-color);
+    fill: var(--button-disabled-text-color);
 }
 
-.btn, .btn-large, .btn-small,
+.btn:not(.btn-nav), .btn-large, .btn-small,
 .btn-floating,
 .btn-large,
 .btn-small,
@@ -2206,9 +2240,21 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 }
 
 .btn svg {
-	fill: var(--inverse-text-color);
 	height: 36px;
 	line-height: 36px;
+}
+
+.btn.btn-nav svg {
+    height: 56px;
+    line-height: 56px;
+    fill: var(--saturated-text-color);
+}
+
+@media only screen and (min-width: 601px) {
+    .btn.btn-nav svg {
+        height: 64px;
+        line-height: 64px;
+    }
 }
 
 .btn-floating {
@@ -2229,7 +2275,7 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
 }
 
 .btn-floating:hover, .btn-floating:focus {
-  background-color: var(--fab-focus-color);
+    background-color: var(--fab-focus-color);
 }
 
 .btn-floating:before {
@@ -2240,16 +2286,18 @@ html:not(.no-js) #backToTopBtnContainer:not(.visible) .reveal-label {
     width: 56px;
     height: 56px;
     padding: 0;
+    border: none;
+    fill: var(--saturated-text-color);
+}
+
+.btn-floating.btn-large {
+    height: 56px;
+    line-height: 56px;
 }
 
 .btn-floating.btn-large svg {
     height: 56px;
     line-height: 56px;
-    fill: var(--saturated-text-color);
-}
-
-button.btn-floating {
-    border: none;
 }
 
 .fixed-action-btn {
@@ -2265,6 +2313,7 @@ button.btn-floating {
     box-shadow: none;
     background-color: transparent;
     color: var(--button-flat-text-color);
+    fill: var(--button-flat-text-color);
     cursor: pointer;
     transition: background-color .2s;
 }
@@ -2275,9 +2324,10 @@ button.btn-floating {
 }
 
 .btn-flat.disabled, .btn-flat[disabled] {
-  background-color: transparent !important;
-  color: var(--button-flat-disabled-text-color);
-  cursor: default;
+    background-color: transparent !important;
+    color: var(--button-flat-disabled-text-color);
+    fill: var(--button-flat-disabled-text-color);
+    cursor: default;
 }
 
 .btn-large {
