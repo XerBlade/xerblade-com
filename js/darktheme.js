@@ -189,14 +189,17 @@ function initTheme() {
         themeToggleAuto.addEventListener('click', function(event) {
             setDarkMode();
             themeToggleContainer.className = 'reveal-labelled dark-theme-set';
+            themeToggleDark.focus();
         });
         themeToggleDark.addEventListener('click', function(event) {
             setLightMode();
             themeToggleContainer.className = 'reveal-labelled light-theme-set';
+            themeToggleLight.focus();
         });
         themeToggleLight.addEventListener('click', function(event) {
             setDefaultColorMode();
             themeToggleContainer.className = 'reveal-labelled auto-theme-set';
+            themeToggleAuto.focus();
         });
     } else {
         // Show only light and dark toggle options
@@ -211,10 +214,12 @@ function initTheme() {
         themeToggleDark.addEventListener('click', function(event) {
             setLightMode();
             themeToggleContainer.className = 'reveal-labelled light-theme-set';
+            themeToggleLight.focus();
         });
         themeToggleLight.addEventListener('click', function(event) {
             setDarkMode();
             themeToggleContainer.className = 'reveal-labelled dark-theme-set';
+            themeToggleDark.focus();
         });
     }
 }
