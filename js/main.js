@@ -295,6 +295,7 @@ function initModals() {
             const overlay = document.querySelector('.modal-overlay');
             overlay.onclick = () => {
                 modal.classList.remove('open');
+                trigger.focus();
             }
         };
         trigger.onkeydown = (e) => {
@@ -307,9 +308,11 @@ function initModals() {
         trigger.role = 'button';
         modal.querySelector('form').addEventListener('submit', () => {
             modal.classList.remove('open');
+            trigger.focus();
         });
         modal.querySelector('.modal-close').onclick = () => {
             modal.classList.remove('open');
+            trigger.focus();
         }
     });
 }
