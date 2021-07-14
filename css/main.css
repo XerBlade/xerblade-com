@@ -166,11 +166,17 @@ html, body, input, textarea, select, button, .card-panel:not(.z-depth-0) {
 }
 
 ul:not(.browser-default) {
-    padding-left: 0;
+    padding-inline-start: 0;
     list-style-type: none;
 }
 
 ul:not(.browser-default) > li {
+    list-style-type: none;
+}
+
+dd > ul, dd > ol {
+    margin-block-start: 0;
+    padding-inline-start: 0;
     list-style-type: none;
 }
 
