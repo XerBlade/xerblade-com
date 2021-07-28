@@ -2067,7 +2067,7 @@ nav ul a:hover, nav ul a:focus, nav ul button:hover, nav ul button:focus {
     visibility: visible;
     opacity: 1;
     max-height: 500px;
-    transition: .3s ease;
+    transition: .3s ease .25s;
 }
 
 .reveal-labelled:hover .reveal-label-up,
@@ -2092,7 +2092,7 @@ nav ul a:hover, nav ul a:focus, nav ul button:hover, nav ul button:focus {
 
 .reveal-labelled.reveal-delay:hover .reveal-label,
 .reveal-labelled.reveal-delay:focus .reveal-label {
-    transition-delay: .5s;
+    transition-delay: 1s;
 }
 
 /* Special case for FAB on touch devices, since it retains focus after fading out, so the label normally remains visible */
