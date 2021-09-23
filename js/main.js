@@ -320,6 +320,30 @@ function initModals() {
 // End initialize modal popups
 
 
+// Initialize paypal donation card action
+
+function initPaypal() {
+    const donationCard = document.getElementById('donation-card');
+    const paypalLink = document.getElementById('paypal-link');
+
+    if (donationCard && paypalLink) {
+        paypalLink.href = 'javascript:void(0)';
+        paypalLink.role = 'button';
+        paypalLink.onclick = () => {
+            donationCard.classList.toggle('show');
+        };
+        paypalLink.onkeydown = (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                paypalLink.click();
+            }
+        }
+    }
+}
+
+// End initialize paypal donation card action
+
+
 function init() {
     initDateTimes();
     moveDescription();
@@ -329,6 +353,7 @@ function init() {
     initShareButton();
     initFormValidation();
     initModals();
+    initPaypal();
 }
 
 if (document.readyState == 'loading') {

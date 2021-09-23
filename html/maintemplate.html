@@ -27,7 +27,7 @@
     <script>(()=>{const e=new URL(window.location),n=new URLSearchParams(e.search);n.append("m","0"),e.search=n.toString(),window.history.replaceState({},"","/"+e.href.substring(e.href.indexOf("/")+1))})();</script>
     </b:if>
 
-    <link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/5aa332a9d764661f9de52a1483da67939dbdb492/css/main.min.css" integrity="sha384-N8iz5eV4VXubgUHElvk+WvU+rS80wlyj4CHOCyhVK0q8rKT7/tzvfvwX1fNP2v/c" crossorigin="anonymous"/>
+    <link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/734a74e3e316d39aa495f9ec0d88c81bced73a4b/css/main.min.css" integrity="sha384-UtdiG3XSUuh4ylhvk2YzZEX341KFXdKxCV1Xw4VKu+VmnE/iZJn5+9gUfeHX0tiX" crossorigin="anonymous"/>
     <link rel="preload" as="style" href="https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/80a804ced06412e8c8afe1e1231252337d347f0b/css/darktheme.min.css" integrity="sha384-P0iKD6xR/SRvkPgBTT2jyoGMK7OkKH71a6uoEvNuj3ouKGrY55gmWT9ACaiG8fS8" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="preconnect" href="https://xerblade.disqus.com"/>
@@ -215,7 +215,7 @@
 <script src="https://www.google.com/cse/api/partner-pub-3818891363269501/cse/2883251015/queries/js?oe=UTF-8&amp;callback=(new+PopularQueryRenderer(document.getElementById(%22popularsearch-queries%22))).render" defer='defer'></script>
     
 
-<link href='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/5aa332a9d764661f9de52a1483da67939dbdb492/css/main.min.css' media='all' rel='stylesheet' integrity="sha384-N8iz5eV4VXubgUHElvk+WvU+rS80wlyj4CHOCyhVK0q8rKT7/tzvfvwX1fNP2v/c" crossorigin="anonymous" />
+<link href='https://rawcdn.githack.com/XerBlade/xerblade-com-tracker/734a74e3e316d39aa495f9ec0d88c81bced73a4b/css/main.min.css' media='all' rel='stylesheet' integrity="sha384-UtdiG3XSUuh4ylhvk2YzZEX341KFXdKxCV1Xw4VKu+VmnE/iZJn5+9gUfeHX0tiX" crossorigin="anonymous" />
 <!--<script type='text/javascript'>
 //<![CDATA[
     (() => {
@@ -1492,7 +1492,7 @@
                                 <!-- Begin donation panel -->
                                 <b:if cond='data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/pages.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/tags.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/search.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/follow.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/about.html&quot; and data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/contact.html&quot;'>
                                     <b:if cond='data:blog.canonicalUrl != data:blog.canonicalHomepageUrl + &quot;p/privacy.html&quot;'>
-                                        <footer class="card yellow lighten-5 hide-ads" id='donation-card'>
+                                        <footer class="card sticky-action hide-ads" id='donation-card'>
                                             <section class="card-content black-text">
                                                 <p>Running a website costs money, and advertising doesn&#8217;t pay like it used to. Consider donating on PayPal or buying me a coffee on Ko-fi. Every little bit helps. If every visitor gave even a dollar, my monthly costs could be covered in under a day.</p>
                                             </section>
@@ -1500,6 +1500,25 @@
                                                 <a href='https://www.paypal.com/cgi-bin/webscr?hosted_button_id=VUC44CJTEFR6L&amp;cmd=_s-xclick'>PayPal</a>
                                                 <a href='https://ko-fi.com/xerblade'>Ko-fi</a>
                                             </footer>
+                                            <div class="card-reveal">
+                                                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                                    <input type="hidden" name="hosted_button_id" value="VUC44CJTEFR6L" />
+                                                    <div style="display:flex;align-items:center">
+                                                        <label id="regPayPalButton" style="line-height:26px;padding-right:2ch">&lt; $12 USD</label>
+                                                        <input aria-describedby="regPayPalButton" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                                                    </div>
+                                                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                                                </form>
+
+                                                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                                    <input type="hidden" name="hosted_button_id" value="LULEDSFDNPWWA" />
+                                                    <div style="display:flex;align-items:center">
+                                                        <label id="mpPayPalButton" style="line-height:26px;padding-right:2ch">&gt; $12 USD</label>
+                                                        <input aria-describedby="mpPayPalButton" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                                                    </div>
+                                                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                                                </form>
+                                            </div>
                                         </footer>
                                     </b:if>
                                 </b:if>

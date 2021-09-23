@@ -3563,6 +3563,49 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     color: var(--donation-card-link-focus-color);
 }
 
+/* Card action panel (donation card add-on) */
+.card .card-reveal {
+    padding: 24px;
+    position: absolute;
+    background-color: var(--card-background-color);
+    width: 100%;
+    overflow-y: auto;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    z-index: 3;
+    visibility: hidden;
+    transition: visibility 0s linear 0.2s, transform 0.2s;
+}
+
+.card.show .card-reveal {
+    visibility: visible;
+    transform: translateY(-100%);
+    transition: visibility 0s, transform 0.2s;
+}
+
+.card .card-reveal .card-title {
+    cursor: pointer;
+    display: block;
+}
+
+.card.sticky-action {
+    overflow-y: hidden;
+}
+
+.card.sticky-action .card-action {
+    z-index: 2;
+}
+
+.card.sticky-action.show .card-action {
+    background-color: inherit;
+}
+
+.card.sticky-action .card-reveal {
+    z-index: 1;
+    padding-bottom: 64px;
+}
+
 .post-labels .btn-flat {
     color: var(--main-text-color);
 }
