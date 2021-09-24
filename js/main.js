@@ -323,14 +323,14 @@ function initModals() {
 // Initialize paypal donation card action
 
 function initPaypal() {
-    const donationCard = document.getElementById('donation-card');
+    const donationCardPaypalReveal = document.getElementById('donation-card-paypal-reveal');
     const paypalLink = document.getElementById('paypal-link');
 
-    if (donationCard && paypalLink) {
+    if (donationCardPaypalReveal && paypalLink) {
         paypalLink.href = 'javascript:void(0)';
         paypalLink.role = 'button';
         paypalLink.onclick = () => {
-            donationCard.classList.toggle('show');
+            donationCardPaypalReveal.classList.toggle('show-reveal');
         };
         paypalLink.onkeydown = (e) => {
             if (e.code === 'Space') {

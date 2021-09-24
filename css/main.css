@@ -3569,7 +3569,6 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     position: absolute;
     background-color: var(--card-background-color);
     width: 100%;
-    overflow-y: auto;
     left: 0;
     top: 100%;
     height: 100%;
@@ -3578,7 +3577,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     transition: visibility 0s linear 0.2s, transform 0.2s;
 }
 
-.card.show .card-reveal {
+.card .card-reveal.show-reveal {
     visibility: visible;
     transform: translateY(-100%);
     transition: visibility 0s, transform 0.2s;
@@ -3595,9 +3594,6 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 
 .card.sticky-action .card-action {
     z-index: 2;
-}
-
-.card.sticky-action.show .card-action {
     background-color: inherit;
 }
 
