@@ -1839,7 +1839,6 @@ nav ul a:hover, nav ul a:focus, nav ul button:hover, nav ul button:focus {
 }
 
 .navbar-fixed {
-    position: fixed;
     height: 56px;
     z-index: 997;
 	width: 100%;
@@ -1855,15 +1854,8 @@ nav ul a:hover, nav ul a:focus, nav ul button:hover, nav ul button:focus {
     }
 }
 
-.main-container {
-	margin-top: 64px;
-}
-
 @media (max-width: 600px), (max-width: 992px) and (min-width: 601px) and (max-height: 519px) {
-	.main-container {
-		margin-top: 0;
-	}
-    .page-footer .footer-copyright {
+	.page-footer .footer-copyright {
 		padding-bottom: 56px;
     }
 }
@@ -2910,13 +2902,12 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 
 /* Begin nav drawer */
 .sidenav {
-    position: fixed;
+    position: absolute;
     width: 300px;
     left: 0;
     top: 56px;
     margin: 0;
     transform: translateX(0);
-    height: calc(100% + 60px);
 	padding-top: 8px;
     padding-bottom: 60px;
     background-color: var(--sidenav-background-color);
@@ -2947,6 +2938,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 
 @media (max-width: 600px), (min-width: 601px) and (max-width: 992px) and (max-height: 519px) {
 	.sidenav {
+        position: fixed;
 		top: auto;
 		bottom: 56px;
 		padding-top: 0;
@@ -3039,6 +3031,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 
 @media (max-width: 600px), (min-width: 601px) and (max-width: 992px) and (max-height: 519px) {
 	.navbar-fixed {
+        position: fixed;
 		bottom: 0;
 		height: 56px;
 	}
