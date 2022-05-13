@@ -144,7 +144,7 @@ body {
 }
 
 html, button, input, optgroup, select, textarea {
-	font-family: Roboto, Tahoma, sans-serif;
+	font-family: 'Roboto Flex', Tahoma, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, .brand-logo, .card-title {
@@ -3835,11 +3835,11 @@ div.clear {
         font-family: 'Roboto Slab', Georgia, serif;
     }
     h1, h2, h3, h4, h5, h6, .brand-logo, .card-title {
-        font-family: 'Merriweather', 'Lucida Bright', serif;
+        font-family: 'Roboto Serif', 'Lucida Bright', serif;
     }
 
     .dc-list-pos .dc-list-no {
-        font-family: 'Merriweather', 'Lucida Bright', serif;
+        font-family: 'Roboto Serif', 'Lucida Bright', serif;
     }
 }
 
