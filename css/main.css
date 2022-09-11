@@ -144,15 +144,15 @@ body {
 }
 
 html, button, input, optgroup, select, textarea {
-	font-family: 'Roboto Flex', Tahoma, sans-serif;
+	font-family: Outfit, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, .brand-logo, .card-title {
-	font-family: 'Open Sans', 'Trebuchet MS', sans-serif;
+	font-family: Comfortaa, Verdana, sans-serif;
 }
 
 .dc-list-pos .dc-list-no {
-	font-family: 'Open Sans', 'Trebuchet MS', sans-serif;
+	font-family: Comfortaa, Verdana, sans-serif;
 	font-weight: 600;
 }
 
