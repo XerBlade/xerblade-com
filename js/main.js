@@ -4,51 +4,48 @@
 
 // Standard date and time string
 function formatDateTime(isod) {
-    const date = moment(isod);
+    const date = new Date(isod);
     
-    const timeString = date.format('LLLL');
+    const timeString = date.toLocaleString([], {dateStyle: "full", timeStyle: "short"});
 
     return timeString;
 }
+
 // Same as before but without the time
 function formatDateOnly(isod) {
-    const date = moment(isod);
+    const date = new Date(isod);
     
-    const timeString = date.format('LL');
+    const timeString = date.toLocaleDateString([], {dateStyle: "long"});
 
     return timeString;
 }
+
 // Abberivated data and time with like the slashes and stuff
 function formatShortDateTime(isod) {
-    const date = moment(isod);
+    const date = new Date(isod);
     
-    const dateString = date.format('l');
-    const timeString = date.format('LT');
+    const timeString = date.toLocaleString([], {dateStyle: "short", timeStyle: "short"});
 
-    return dateString + " – " + timeString;
+    return timeString;
 }
 
 function initDateTimes() {
-    if (typeof moment === 'function') {
-        const dateTime = document.querySelectorAll(".postDateTimeDisplay")
-        dateTime.forEach(elem => {
-            elem.textContent = formatDateTime(elem.getAttribute("content"));
-        });
-        const timeOnly = document.querySelectorAll(".postTimeOnlyDisplay")
-        timeOnly.forEach(elem => {
-            elem.parentNode.removeChild(elem);
-        });
-        const postDate = document.querySelectorAll(".postDateDisplay")
-        postDate.forEach(elem => {
-            elem.textContent = formatDateOnly(elem.getAttribute("content"));
-        });
-        const shortDateTime = document.querySelectorAll(".postShortDateTimeDisplay")
-        shortDateTime.forEach(elem => {
-            elem.textContent = formatShortDateTime(elem.getAttribute("content"));
-        });
-    } else {
-        document.getElementById('momentjs').addEventListener('load', initDateTimes);
-    }
+    const dateTime = document.querySelectorAll(".postDateTimeDisplay")
+    dateTime.forEach(elem => {
+        elem.textContent = formatDateTime(elem.getAttribute("content"));
+    });
+    const timeOnly = document.querySelectorAll(".postTimeOnlyDisplay")
+    timeOnly.forEach(elem => {
+        elem.parentNode.removeChild(elem);
+    });
+    const postDate = document.querySelectorAll(".postDateDisplay")
+    postDate.forEach(elem => {
+        elem.textContent = formatDateOnly(elem.getAttribute("content"));
+    });
+    const shortDateTime = document.querySelectorAll(".postShortDateTimeDisplay")
+    shortDateTime.forEach(elem => {
+        elem.textContent = formatShortDateTime(elem.getAttribute("content"));
+    });
 }
 
 
