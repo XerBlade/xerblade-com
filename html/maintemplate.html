@@ -564,8 +564,8 @@
                         <b:include name='nextprev'/>
                       <!--</b:if>-->
                         <!-- feed links -->
-                        <b:include name='feedLinks'/>
-                        <b:if cond='data:top.showStars'>
+                        <!--<b:include name='feedLinks'/>-->
+                        <!--<b:if cond='data:top.showStars'>
                           <script defer='defer' src='//www.google.com/jsapi' type='text/javascript'/>
                           <script type='text/javascript'>
                             google.load(&quot;annotations&quot;, &quot;1&quot;, {&quot;locale&quot;: &quot;<data:top.languageCode/>&quot;});
@@ -576,7 +576,7 @@
                             }
                             google.setOnLoadCallback(initialize);
                           </script>
-                        </b:if>
+                        </b:if>-->
                         <b:else/>
                         <b:include name='mobile-main'/>
                       </b:if>
