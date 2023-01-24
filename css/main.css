@@ -561,6 +561,19 @@ td, th {
     font-size: 1.6rem;
 }
 
+.page-footer .footer-section-header {
+    font-size: 2.62rem;
+    margin: 1.75rem 0 1.05rem 0;
+    line-height: 1.1;
+}
+
+@media only screen and (max-width: 600px) {
+    .page-footer .footer-section-header {
+        font-size: 1.75rem;
+        margin: 1.17rem 0 0.7rem 0;
+    }
+}
+
 .page-footer .footer-copyright {
     overflow: hidden;
     min-height: 50px;
@@ -639,6 +652,12 @@ body {
     border-bottom: 1px solid var(--collection-border-color);
 }
 
+.collection .collection-item .title {
+    font-size: 1.84rem;
+    margin: 1.23rem 0 0.74rem 0;
+    line-height: 1.1;
+}
+
 .collection .collection-item.avatar {
     min-height: 84px;
     padding-left: 72px;
@@ -703,6 +722,19 @@ body {
     background-color: var(--collection-background);
     border-bottom: 1px solid var(--collection-border-color);
     padding: 10px 20px;
+}
+
+.collection.with-header .collection-header * {
+    font-size: 3.65rem;
+    margin: 2.4rem 0 1.5rem 0;
+    line-height: 1.1;
+}
+
+@media only screen and (max-width: 600px) {
+    .collection.with-header .collection-header * {
+        font-size: 2.43rem;
+        margin: 1.6rem 0 1rem 0;
+    }
 }
 
 .collection.with-header .collection-item {
@@ -3822,17 +3854,17 @@ div.clear {
         page-break-inside:avoid;
     }
 
-    h4 {
+    .post-home-title, .post-title, .collection.with-header .collection-header * {
         font-size: 3.65rem;
         margin: 2.43rem 0 1.46rem 0;
     }
 
-    h5 {
+    .card .card-title, .page-footer .footer-section-header, #tab-contents > dl > dt * {
         font-size: 2.62rem;
         margin: 1.75rem 0 1.05rem 0;
     }
 
-    h6 {
+    .collection .collection-item .title, .collection .collection-item.avatar .title, dl > dt * {
         font-size: 1.15rem;
         margin: 1.15rem 0 0.69rem 0;
     }
@@ -4073,6 +4105,32 @@ body {
 #tab-contents > dl,
 #tab-contents > dl > dd {
     margin: 0;
+}
+
+dl > dt * {
+    font-size: 1.84rem;
+    margin: 1.23rem 0 0.74rem 0;
+    line-height: 1.1;
+}
+
+@media only screen and (max-width: 600px) {
+    dl > dt * {
+        font-size: 1.23rem;
+        margin: 0.82rem 0 0.49rem 0;
+    }
+}
+
+#tab-contents > dl > dt * {
+    font-size: 2.62rem;
+    margin: 1.75rem 0 1.05rem 0;
+    line-height: 1.1;
+}
+
+@media only screen and (max-width: 600px) {
+    #tab-contents > dl > dt * {
+        font-size: 1.75rem;
+        margin: 1.17rem 0 0.7rem 0;
+    }
 }
 
 /* Back to top button fade-in-out */
