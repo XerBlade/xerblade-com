@@ -266,6 +266,18 @@ h6 {
     }
 }
 
+.post-home-title, .post-title {
+    font-size: 3.65rem;
+    margin: 2.4rem 0 1.5rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-home-title, .post-title {
+        font-size: 2.43rem;
+        margin: 1.6rem 0 1rem 0;
+    }
+}
+
 .clearfix {
     clear: both;
 }
@@ -1915,11 +1927,13 @@ nav ul a:hover, nav ul a:focus, nav ul button:hover, nav ul button:focus {
 .card .card-title {
     font-size: 2.72rem;
     font-weight: 300;
+    margin: 1.75rem 0 1.05rem 0;
 }
 
 @media only screen and (max-width: 600px) {
 	.card .card-title {
 		font-size: 1.92rem;
+        margin: 1.17rem 0 0.7rem 0;
 	}
 }
 
@@ -1980,7 +1994,7 @@ nav ul a:hover, nav ul a:focus, nav ul button:hover, nav ul button:focus {
 
 .card .card-content .card-title {
     display: block;
-    line-height: 32px;
+    line-height: 1.17647;
     margin-bottom: 8px;
 }
 
@@ -3554,10 +3568,6 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     
     .homepage-thumb .card.horizontal .card-stacked .card-content {
         padding-top: 0;
-    }
-    
-    .post-title, .post-home-title {
-        font-size: 1.3em;
     }
     
     .homepage-summary-thumb, homepage-summary-no-thumb {

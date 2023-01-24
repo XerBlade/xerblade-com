@@ -879,7 +879,7 @@
                               <!--<meta expr:content='data:post.id' itemprop='postId'/>-->
                               <a expr:name='data:post.id'/>
                               <b:if cond='data:post.title'>
-                                <h4 class='post-title entry-title' id='post-title' itemprop='name headline'>
+                                <h1 class='post-title entry-title' id='post-title' itemprop='name headline'>
                                   <b:if cond='data:post.link'>
                                     <a expr:href='data:post.link'>
                                       <data:post.title/>
@@ -901,7 +901,7 @@
                                       <meta expr:content='data:post.title' name='twitter:title'/>
                                     </b:if>
                                   </b:if>
-                                </h4>
+                                </h1>
                               </b:if>
                               <div class='post-header'>
                                 <div class='post-header-line-1'/>
@@ -1021,7 +1021,7 @@
                       <b:if cond='data:blog.pageType == &quot;index&quot; or data:blog.pageType == &quot;archive&quot;'>
                         <article class='post-start row post hentry card' expr:id='&quot;post_po_summary&quot; + data:post.id'>
                             <header class='home-post-single-header'>
-                                <h4 class='post-home-title post-main-home-title'>
+                                <h1 class='post-home-title post-main-home-title'>
                                     <b:if cond='data:post.link'>
                                         <a expr:href='data:post.link' expr:title='data:post.title'>
                                             <span class='post-title entry-title'>
@@ -1041,7 +1041,7 @@
                                             </span>
                                         </b:if>
                                     </b:if>
-                                </h4>
+                                </h1>
                                 <section class='post-header-home'>
                                     <span class='post-author author vcard'>
                                         <b:if cond='data:top.showAuthor'>
@@ -1195,22 +1195,22 @@
                                             <meta expr:content='data:post.title' name='twitter:title'/>
                                             <b:else/>
                                             <b:if cond='data:post.url.canonical'>
-                                                <h4 class='post-title entry-title' id='post-title' itemprop='name headline'>
+                                                <h1 class='post-title entry-title' id='post-title' itemprop='name headline'>
                                                     <data:post.title/>
-                                                </h4>
+                                                </h1>
                                                 <meta expr:content='data:post.title' name='twitter:title'/>
                                                 <b:else/>
                                                 <b:if cond='data:blog.canonicalUrl.https != data:post.url.canonical'>
-                                                    <h4 class='post-title entry-title' id='post-title' itemprop='name headline'>
+                                                    <h1 class='post-title entry-title' id='post-title' itemprop='name headline'>
                                                         <a expr:href='data:post.url.canonical'>
                                                             <data:post.title/>
                                                         </a>
-                                                    </h4>
+                                                    </h1>
                                                     <meta expr:content='data:post.title' name='twitter:title'/>
                                                     <b:else/>
-                                                    <h4 class='post-title entry-title' id='post-title' itemprop='name headline'>
+                                                    <h1 class='post-title entry-title' id='post-title' itemprop='name headline'>
                                                         <data:post.title/>
-                                                    </h4>
+                                                    </h1>
                                                     <meta expr:content='data:post.title' name='twitter:title'/>
                                                 </b:if>
                                                 <b:else/>
