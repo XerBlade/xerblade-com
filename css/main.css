@@ -197,7 +197,7 @@ a:not(.brand-logo):not(.ripple):not(.rail-item):focus {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -222,16 +222,19 @@ h3 {
 h4 {
     font-size: 3.65rem;
     margin: 2.4rem 0 1.5rem 0;
+    line-height: 1.15;
 }
 
 h5 {
     font-size: 2.62rem;
     margin: 1.75rem 0 1.05rem 0;
+    line-height: 1.2;
 }
 
 h6 {
     font-size: 1.84rem;
     margin: 1.23rem 0 0.74rem 0;
+    line-height: 1.3;
 }
 
 @media only screen and (max-width: 600px) {
@@ -564,7 +567,7 @@ td, th {
 .page-footer .footer-section-header {
     font-size: 2.62rem;
     margin: 1.75rem 0 1.05rem 0;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 @media only screen and (max-width: 600px) {
@@ -655,7 +658,7 @@ body {
 .collection .collection-item .title {
     font-size: 1.84rem;
     margin: 1.23rem 0 0.74rem 0;
-    line-height: 1.1;
+    line-height: 1.3;
 }
 
 .collection .collection-item.avatar {
@@ -727,7 +730,7 @@ body {
 .collection.with-header .collection-header * {
     font-size: 3.65rem;
     margin: 2.4rem 0 1.5rem 0;
-    line-height: 1.1;
+    line-height: 1.15;
 }
 
 @media only screen and (max-width: 600px) {
@@ -4110,7 +4113,7 @@ body {
 dl > dt * {
     font-size: 1.84rem;
     margin: 1.23rem 0 0.74rem 0;
-    line-height: 1.1;
+    line-height: 1.3;
 }
 
 @media only screen and (max-width: 600px) {
@@ -4123,7 +4126,7 @@ dl > dt * {
 dl > dt .section-header {
     font-size: 3.65rem;
     margin: 2.4rem 0 1.5rem 0;
-    line-height: 1.1;
+    line-height: 1.15;
 }
 
 @media only screen and (max-width: 600px) {
@@ -4136,7 +4139,7 @@ dl > dt .section-header {
 #tab-contents > dl > dt * {
     font-size: 2.62rem;
     margin: 1.75rem 0 1.05rem 0;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 @media only screen and (max-width: 600px) {
