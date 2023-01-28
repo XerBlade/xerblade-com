@@ -3572,6 +3572,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 
 /* Padding for post image */
 .homepage-thumb .card.horizontal {
+    height: 11.0625em;
     margin: 0;
 }
 
@@ -3580,6 +3581,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     width: 5.875em;
     object-fit: cover;
 }
+
 .post-timestamp, .index-comment-link, .post-comment-link {
     white-space: nowrap;
     overflow: hidden;
@@ -3587,7 +3589,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 /* Keep summary text under control */
-.homepage-summary-thumb, homepage-summary-no-thumb {
+.homepage-summary-thumb, .homepage-summary-no-thumb {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -3598,6 +3600,10 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 @media only screen and (max-width: 600px) {
+    .homepage-thumb .card.horizontal {
+        height: 13.0625em;
+    }
+    
     .homepage-thumb .card.horizontal img {
         height: 13.0625em;
         width: 6.875em;
@@ -3607,7 +3613,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
         padding-top: 0;
     }
     
-    .homepage-summary-thumb, homepage-summary-no-thumb {
+    .homepage-summary-thumb, .homepage-summary-no-thumb {
         -webkit-line-clamp: 3;
         max-height: 4.875em;
     }
