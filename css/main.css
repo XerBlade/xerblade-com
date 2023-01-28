@@ -128,7 +128,7 @@ sup {
 }
 
 html {
-    line-height: 1.5;
+    line-height: 1.625;
     font-weight: normal;
     box-sizing: border-box;
     font-size: 62.5%;
@@ -3592,8 +3592,9 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    max-height: 3.25em;
     padding: 0 !important;
-    margin: 24px !important;
+    margin: auto 24px !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -3608,6 +3609,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     
     .homepage-summary-thumb, homepage-summary-no-thumb {
         -webkit-line-clamp: 3;
+        max-height: 4.875em;
     }
 }
 
@@ -3685,11 +3687,6 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     cursor: default;
     background-color: var(--post-tags-label-color);
     color: var(--inverse-text-color);
-}
-
-/* Fix widget line sizing */
-.widget {
-    line-height: 2;
 }
 
 /* Popular search queries spacing */
