@@ -3915,11 +3915,11 @@ div.clear {
         font-family: 'Roboto Slab', Georgia, serif;
     }
     h1, h2, h3, h4, h5, h6, .brand-logo, .card-title {
-        font-family: 'Roboto Serif', 'Lucida Bright', serif;
+        font-family: 'Josefin Slab', Cambria, 'Times New Roman', serif;
     }
 
     .dc-list-pos .dc-list-no {
-        font-family: 'Roboto Serif', 'Lucida Bright', serif;
+        font-family: 'Josefin Slab', Cambria, 'Times New Roman', serif;
         font-weight: 600;
     }
 }
