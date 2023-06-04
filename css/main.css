@@ -178,10 +178,13 @@ ul:not(.browser-default) > li {
     list-style-type: none;
 }
 
+.hide-list-marker {
+    list-style-type: none;
+}
+
 dd > ul, dd > ol {
     margin-block-start: 0;
     padding-inline-start: 0;
-    list-style-type: none;
 }
 
 a {
@@ -3890,8 +3893,12 @@ div.clear {
         text-decoration: revert;
     }
     
-    ul, ol, li {
+    ul, ul > li {
         list-style-type: revert !important;
+        padding: revert !important;
+    }
+    
+    ol, li {
         padding: revert !important;
     }
     
