@@ -158,6 +158,7 @@ h1, h2, h3, h4, h5, h6, .brand-logo, .card-title {
 .dc-list-pos .dc-list-no {
     font-family: Comfortaa, Verdana, sans-serif;
     font-weight: 700;
+    font-size: 1.05em;
 }
 
 .dc-list-char {
@@ -3927,7 +3928,7 @@ div.clear {
 
     .dc-list-pos .dc-list-no {
         font-family: 'Josefin Slab', Cambria, 'Times New Roman', serif;
-        font-weight: 600;
+        font-size: 1.2em;
     }
 }
 
