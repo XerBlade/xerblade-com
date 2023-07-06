@@ -3863,20 +3863,47 @@ div.clear {
         page-break-after:avoid; 
         page-break-inside:avoid;
     }
+    
+    h1 {
+        font-weight: 300;
+    }
+    
+    h2 {
+        font-weight: 350;
+    }
+    
+    h3 {
+        font-weight: 400;
+    }
+    
+    h4 {
+        font-weight: 450;
+    }
+    
+    h5 {
+        font-weight: 500;
+    }
+    
+    h6 {
+        font-weight: 650;
+    }
 
     .post-home-title, .post-title, .collection.with-header .collection-header *, dl > dt .section-header {
         font-size: 3.65rem;
         margin: 2.43rem 0 1.46rem 0;
+        font-weight: 450;
     }
 
     .card .card-title, .page-footer .footer-section-header, #tab-contents > dl > dt * {
         font-size: 2.62rem;
         margin: 1.75rem 0 1.05rem 0;
+        font-weight: 500;
     }
 
     .collection .collection-item .title, .collection .collection-item.avatar .title, dl > dt * {
         font-size: 1.15rem;
         margin: 1.15rem 0 0.69rem 0;
+        font-weight: 650;
     }
 
     .collection .collection-item {
