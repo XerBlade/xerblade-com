@@ -3839,8 +3839,9 @@ div.clear {
 /* Hide nav elements on print */
 @media only print {
     nav, .sidenav, #blog-pager, #footer-nav, .modal, .share-btns, #related-posts, #donation-card, #comments, .pagination,
-    .google-auto-placed, .adsbygoogle, script, ins, .navigation-rail, .fixed-action-btn {
+    .google-auto-placed, .google-auto-placed *, .adsbygoogle, .adsbygoogle *, script, ins, .navigation-rail, .fixed-action-btn {
         display: none !important;
+        visibility: hidden !important;
     }
     #tab-contents > * {
         display: block !important;
