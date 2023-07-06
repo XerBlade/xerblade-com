@@ -3976,10 +3976,6 @@ div.clear {
     font-family: 'Josefin Slab', Cambria, 'Times New Roman', serif;
 }
 
-#print-loader .print-mono {
-    family: 'Courier Prime', 'Courier New', Courier, 'Lucida Typewriter', monospace;
-}
-
 /* Align post comment count on right on tablet and desktop */
 @media (min-width: 601px) {
     .post-comment-link {
