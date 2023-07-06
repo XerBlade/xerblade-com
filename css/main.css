@@ -3960,6 +3960,26 @@ div.clear {
     }
 }
 
+/* Force load of print fonts */
+#print-loader {
+    position:fixed;
+    bottom:-200;
+    opacity:0;
+    pointer-events: none;
+}
+
+#print-loader div {
+    font-family: 'Roboto Slab', Georgia, serif;
+}
+
+#print-loader h6 {
+    font-family: 'Josefin Slab', Cambria, 'Times New Roman', serif;
+}
+
+#print-loader .print-mono {
+    family: 'Courier Prime', 'Courier New', Courier, 'Lucida Typewriter', monospace;
+}
+
 /* Align post comment count on right on tablet and desktop */
 @media (min-width: 601px) {
     .post-comment-link {
