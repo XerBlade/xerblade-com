@@ -4156,6 +4156,10 @@ body {
     display: block;
 }
 
+.tabs-loaded.tab1100 > #tab1100 {
+    display: block;
+}
+
 .tabs-loaded.tabupcoming > #tabupcoming {
     display: block;
 }

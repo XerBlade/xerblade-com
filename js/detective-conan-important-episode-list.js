@@ -145,10 +145,17 @@ function changePageIndicator(index) {
 		break;
 	case 15:
 		const page15s = document.querySelectorAll(".page15");
-		const pagenexts = document.querySelectorAll(".pagenext");
 		page15s.forEach(page15 => {
 			page15.classList.add("active");
 			page15.firstElementChild.setAttribute('disabled', true);
+		});
+		break;
+	case 16:
+		const page16s = document.querySelectorAll(".page16");
+		const pagenexts = document.querySelectorAll(".pagenext");
+		page16s.forEach(page16 => {
+			page16.classList.add("active");
+			page16.firstElementChild.setAttribute('disabled', true);
 		});
 		pagenexts.forEach(pagenext => {
 			pagenext.classList.add("disabled");
@@ -177,7 +184,8 @@ function GoToTab(tabid) {
 			case 12: tabid = 'tab800'; break;
 			case 13: tabid = 'tab900'; break;
 			case 14: tabid = 'tab1000'; break;
-			case 15: tabid = 'tabupcoming'; break;
+			case 15: tabid = 'tab1100'; break;
+			case 16: tabid = 'tabupcoming'; break;
 		}
 	} else if (tabid == 'next') {
 		tabs.index++;
@@ -196,8 +204,9 @@ function GoToTab(tabid) {
 			case 12: tabid = 'tab800'; break
 			case 13: tabid = 'tab900'; break;
 			case 14: tabid = 'tab1000'; break;
-			case 15: tabid = 'tabupcoming'; break;
-			case 16: return false;
+			case 15: tabid = 'tab1100'; break;
+			case 16: tabid = 'tabupcoming'; break;
+			case 17: return false;
 		}
 	} else {
 		switch (tabid) {
@@ -215,7 +224,8 @@ function GoToTab(tabid) {
 			case 'tab800': tabs.index = 12; break;
 			case 'tab900': tabs.index = 13; break;
 			case 'tab1000': tabs.index = 14; break;
-			case 'tabupcoming': tabs.index = 15; break;
+			case 'tab1100': tabs.index = 15; break;
+			case 'tabupcoming': tabs.index = 16; break;
 		}
 	}
 
@@ -323,6 +333,11 @@ function init() {
             case 'eps1000':
             case 'tab1000':
                 GoToTab('tab1000');
+                document.getElementById(hash).scrollIntoView(true);
+                break;
+            case 'eps1100':
+            case 'tab1100':
+                GoToTab('tab1100');
                 document.getElementById(hash).scrollIntoView(true);
                 break;
             case 'epsupcoming':
