@@ -3961,6 +3961,11 @@ div.clear {
     .dc-list-pos .dc-list-no {
         font-size: 1.2em;
     }
+    
+    /* Make printed links useful */
+    article a[href]::after {
+        content: ' (' attr(href) ')';
+    }
 }
 
 /* Force load of print fonts */
