@@ -103,7 +103,9 @@
     --max-container-width: 960px;
     
     --main-font: 'Lexend Deca', 'Century Gothic', 'URW Gothic L', 'ITC Avant Garde Gothic', Verdana, sans-serif;
+    --main-font-aspect: 0.525;
     --header-font: 'Josefin Sans', 'Trebuchet MS', sans-serif;
+    --header-font-aspect: none;
     --main-print-font: 'Cormorant Infant', 'Times New Roman', serif;
     --header-print-font: 'Josefin Slab', Cambria, 'Times New Roman', serif;
 }
@@ -154,14 +156,17 @@ body {
 
 html, button, input, optgroup, select, textarea {
     font-family: var(--main-font);
+    font-size-adjust: var(--main-font-aspect);
 }
 
 h1, h2, h3, h4, h5, h6, .brand-logo, .card-title {
     font-family: var(--header-font);
+    font-size-adjust: var(--header-font-aspect);
 }
 
 .dc-list-pos .dc-list-no {
     font-family: var(--header-font);
+    font-size-adjust: var(--header-font-aspect);
     font-weight: 700;
     font-size: 1.1em;
 }
